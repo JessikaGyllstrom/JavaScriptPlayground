@@ -89,6 +89,37 @@ console.log(car["engine"]["pistons"][1]);
 //run the function inside the array
 console.log(array[4]());
 
-
+//MODIFYING MEMBERS OF AN OBJECT
 //change a value 
 car.make = "saab";
+//create a new key
+car.model = "v60";
+//create a new method inside an object
+car.stop = function() {return "stop";};
+//remove members
+delete car.color;
+//this funtion returns 'true' if it could be removed
+//delete methods
+delete car.stop;
+
+//MODIFYING MEMBERS OF AN ARRAY
+//delete first element in array
+array.shift();
+console.log(array[0]);
+//delete element in array (the last)
+console.log(array[3]);
+array.pop();
+console.log(array[3]);
+//add element at the beginning of array
+array.unshift ("newstring", 20, 30);
+console.log(array[0]);
+//add element at the end of array
+array.push("endstring", 300, 600);
+console.log(array[6]);
+//remove element at given position
+//remove from index 2, delete 2 elements
+array.splice(2, 2);
+//add element at given position
+array.splice(1, 0, "added string", "splice", 400);
+console.log(array[1]);
+
