@@ -71,12 +71,24 @@ var array = [
     //array inside the array
     ["embedded", 200],
     //object inside array
-    {car : "ford"}
+    {car : "ford"},
+
+    //function inside array, NOTE! you cant name the function 
+    function() {return "drive now!!";}
 ]
 //Member access: .
 console.log(car.make);
 console.log(car.engine.fuel);
 //invoke the drive-method
 console.log(car.drive());
-//access values in array (computed member access)
+console.log(car["drive"]());
+//access values in array/objects (computed member access)
 console.log(car.engine.pistons[0]);
+console.log(array[2]);
+console.log(car["engine"]["pistons"][1]);
+//run the function inside the array
+console.log(array[4]());
+
+
+//change a value 
+car.make = "saab";
