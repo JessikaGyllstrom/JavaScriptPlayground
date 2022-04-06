@@ -123,3 +123,14 @@ array.splice(2, 2);
 array.splice(1, 0, "added string", "splice", 400);
 console.log(array[1]);
 
+function name() {
+    var fullname = "Jessika Gyllström";
+
+    // the variavle "name" will temporarely store "fullname" while concatfunction is executed, 
+    //then it will be deleted
+    function concat(name) {
+        return "Miss. " + name;
+    }
+    return concat(fullname);
+}
+console.log(name());
