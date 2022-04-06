@@ -152,7 +152,8 @@ var array = [
 //a constructor function starts with a CAPITAL LETTER
 function Apple (x,y,color,score) 
 {
-    this = {};
+    //this = {};
+
     //this.x points att the this = {} object
     // = x points at the paramater x
     this.x = x;
@@ -160,5 +161,20 @@ function Apple (x,y,color,score)
     this.color = color;
     this.score = score;
 }
+//prototypes can be shared to constructors
+//prototypes are not unique to every single object, but shared
+//Apple1 & Apple2 and apple prototype will be connected
+Apple.prototype = {
+    eat:function() {return "eat the apple";},
+    throw:function() {return "throw the apple";}   
+};
 //to construct a Apple use NEW keyword
 new Apple();
+//each instance/object is unique
+var apple1 = new Apple(10, 20, "red", 200);
+var apple2 = new Apple(5, 30, "green", 300);
+
+
+console.log(apple1.color);
+console.log(apple1.eat());
+
