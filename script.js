@@ -134,3 +134,18 @@ function name() {
     return concat(fullname);
 }
 console.log(name());
+
+//"this" by default points on the window-object
+//if you have this inside an object or as an element in an array
+//it always points at the window-object
+var object = {
+    prop: this, 
+    method: function() {return this;}
+}
+var array = [
+    this, 
+    function() {return this;}
+]
+
+//constructors are like constructionworkers
+//a blueprint to create an object
