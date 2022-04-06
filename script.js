@@ -148,4 +148,17 @@ var array = [
 ]
 
 //constructors are like constructionworkers
-//a blueprint to create an object
+//a basic blueprint to create an object
+//a constructor function starts with a CAPITAL LETTER
+function Apple (x,y,color,score) 
+{
+    this = {};
+    //this.x points att the this = {} object
+    // = x points at the paramater x
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.score = score;
+}
+//to construct a Apple use NEW keyword
+new Apple();
