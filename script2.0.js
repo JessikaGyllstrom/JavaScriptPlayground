@@ -26,3 +26,7 @@ for(var i = 0; i < classRegister.length; i ++ )
  {
     console.log(classRegister[i]);
 }
+//FOR IN LOOP
+for(var index in classRegister) {
+    console.log("For in loop " + classRegister[index]);
+}
