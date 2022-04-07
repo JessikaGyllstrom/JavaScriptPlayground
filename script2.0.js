@@ -30,3 +30,13 @@ for(var i = 0; i < classRegister.length; i ++ )
 for(var index in classRegister) {
     console.log("For in loop " + classRegister[index]);
 }
+/*you should use let instead of var if possible
+let allows you to declare variables that are limited 
+to the scope of a block statement, or expression on which it is used, 
+unlike the var keyword, which declares a variable globally, or locally 
+to an entire function regardless of block scope
+
+The Document Object Model (DOM) is a programming interface for web documents. 
+It represents the page so that programs can change the document structure, 
+style, and content. The DOM represents the document as nodes and objects; 
+that way, programming languages can interact with the page.*/

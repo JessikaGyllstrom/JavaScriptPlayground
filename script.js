@@ -174,7 +174,6 @@ new Apple();
 var apple1 = new Apple(10, 20, "red", 200);
 var apple2 = new Apple(5, 30, "green", 300);
 
-
 console.log(apple1.color);
 console.log(apple1.eat());
 
