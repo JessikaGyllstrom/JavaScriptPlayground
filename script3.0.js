@@ -98,3 +98,12 @@ function ourFunctionWithArgs(a, b); {
     console.log(a-b);
 }
 ourFunctionWithArgs(10,5); //output is 5
+
+//local variables are only accessed within the scope its declared in
+function myLocalScope() {
+    var myVar = 5;
+    console.log(myVar);//5
+}
+myLocalScope();//5
+console.log();//reference error
+
