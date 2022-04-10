@@ -107,3 +107,20 @@ function myLocalScope() {
 myLocalScope();//5
 console.log();//reference error
 
+//return 
+function minusSeven(num) {
+    return num - 7;
+}
+console.log(minusSeven(10)); // 3
+
+var changed = 0;
+
+function change(num) {
+    return (num + 5) / 3;
+}
+changed = changed(3); //5 is now stored in variable changed
+
+// in computer science a cue is an abstract data structure 
+//where items are kept in order
+// new items can be added to the back of the cue
+// old items can be taken off from the front of the cue
