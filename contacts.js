@@ -54,3 +54,22 @@ function randomWholeNum() {
     return Math.floor(Math.random()*10);
 }
 console.log(randomWholeNum());
+
+//random number in a range
+function ourRandomRange(ourMin, ourMax) {
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+var randomRange = ourRandomRange(1,9);
+console.log(randomRange);
+
+function myRandomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+var rand = myRandomRange(50,99);
+console.log(rand);
+
+// convert string to int using ParseInt();
+function convertToInteger(str) {
+    return parseInt(str);
+}
+console.log(convertToInteger("56"));
