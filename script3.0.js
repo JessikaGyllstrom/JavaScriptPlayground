@@ -78,3 +78,16 @@ ourArray.push(["happy", "Joy"]);
 var ourArray = [1,2,3];
 var removeFromArray = ourArray.pop();
 //removeFromArray now equals 3 and ourArray is 1,2
+var myArray = [["John", 23], ["cat", 2]];
+var removeFromMyArray = myArray.pop();
+//myArray = John, 23
+
+//shift is like pop only it removes at the start instead
+var ourArray = ["stimpson", "j", "cat"];
+var removedFromOurArray = ourArray.shift();
+//ourArray is now "j", "cat"
+
+//unshift is like push only it adds element at the start instead
+var ourArray = ["stimpson", "j", "cat"];
+ourArray.shift("Happy");
+//ourArray now equals "happy", "stimpson", "j", "cat"
