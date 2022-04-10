@@ -54,4 +54,6 @@ myStr[0] = "H";
 //this is OK:
 myStr = "Hello World";
 
-
+var ourArray = ["John, 23"]
+//nested array/multidimensional array
+var myArray = [["Bulls", 23], ["Jessi", 10] ];
