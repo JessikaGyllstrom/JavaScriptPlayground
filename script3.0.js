@@ -68,3 +68,13 @@ ourArray[1] = 45; //50, 45, 70
 var  myArray = [[1,2,3], [4,5,6],[7,8,9]];
 var myData = myArray[2][1];
 console.log(myData);//8
+
+//push to append data to the end of an array
+//push()
+var ourArray = ["Simpson", "J", "cat"];
+ourArray.push(["happy", "Joy"]);
+
+//remove an item from an array with pop()
+var ourArray = [1,2,3];
+var removeFromArray = ourArray.pop();
+//removeFromArray now equals 3 and ourArray is 1,2
