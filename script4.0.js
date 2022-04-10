@@ -51,3 +51,36 @@ var player = testObj[playerNumber];
 console.log(playerNumber);//16
 console.log(testObj[playerNumber]);//montana
 console.log(testObj[12]);
+
+var ourDog = {
+    "name" : "camper",
+    "age" : 4
+};
+ourDog.name = "Happy Camper";
+console.log(ourDog.name);
+
+//array with two objects: 
+var myMusic = [
+    {
+        "artist": "Kvelertak",
+        "song": "1985"
+    },
+    {
+        "artist": "Machine Head",
+        "song": "halo"
+    }
+];
+//accessing nested objects
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passanger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+var gloveBoxContentent = myStorage.car.inside["glove box"];
+console.log(gloveBoxContentent);
