@@ -17,3 +17,15 @@ var student = {
 delete student.score
 student.grade = "F";
 console.log(student);
+
+// the shorthand property name syntax allows creating objects 
+// without explicitly specifying the property name 
+const activity = "surfing";
+const beach = {activity};
+console.log(beach); // activity: "surfing"
+
+const oddNumbers = [1,3,5,7];
+const evenNumbers = oddNumbers.map(number => {
+    return number * 2
+});
+console.log(evenNumbers);
