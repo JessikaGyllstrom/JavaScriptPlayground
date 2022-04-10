@@ -55,4 +55,14 @@ function multiplyAll(arr) {
     return product;
 }
 var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
-console.log(product);
+console.log(product);//5040
+
+// a do while executes at least 1 time, then the condition is checked
+var myArray = [];
+var i = 10;
+
+do {
+    myArray.push(i);
+    i++;
+} while (i < 5 );
+console.log(i, myArray); // 11 [10]
