@@ -84,3 +84,62 @@ var myStorage = {
 };
 var gloveBoxContentent = myStorage.car.inside["glove box"];
 console.log(gloveBoxContentent);
+
+var myPlants = [
+    {
+        type: "flowers",
+        list: [
+            "rose",
+            "tulips",
+            "dandelion"
+        ]
+    },
+    {
+        type: "trees", 
+        list: [
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+var secondTree = myPlants[1].list[1];
+console.log(secondTree); //pine
+
+//record collection
+var collection = {
+    "1": {
+        "album": "1",
+        "artist": "1",
+        "track": "1"
+    },
+    "2": {
+        "album": "2",
+        "artist": "2",
+        "track": "2"
+    },
+    "3": {
+        "album": "3",
+        "artist": "3",
+        "track": "3"
+    }
+}
+// keep a copy of the collection for tests
+// makes a copy of the object
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+function updateRecords (id, prop, value) {
+    if (value === "") {
+        delete collection[id][prop]; {
+            delete collection[id][prop];
+        }
+    } else if (prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+
+    return collection;
+}
+console.log(updateRecords(4, "artist", "4"));
