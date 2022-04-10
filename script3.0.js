@@ -57,3 +57,14 @@ myStr = "Hello World";
 var ourArray = ["John, 23"]
 //nested array/multidimensional array
 var myArray = [["Bulls", 23], ["Jessi", 10] ];
+
+var ourArray = [50, 60, 70];
+var myData = myArray[0];//50
+
+//modify array data
+var ourArray = [50, 60, 70];
+ourArray[1] = 45; //50, 45, 70
+//modify multidimensional array data
+var  myArray = [[1,2,3], [4,5,6],[7,8,9]];
+var myData = myArray[2][1];
+console.log(myData);//8
