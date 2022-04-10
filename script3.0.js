@@ -91,3 +91,10 @@ var removedFromOurArray = ourArray.shift();
 var ourArray = ["stimpson", "j", "cat"];
 ourArray.shift("Happy");
 //ourArray now equals "happy", "stimpson", "j", "cat"
+
+// parameters are variables that act as place holders for the values
+// that are to be input to a function when it is called
+function ourFunctionWithArgs(a, b); {
+    console.log(a-b);
+}
+ourFunctionWithArgs(10,5); //output is 5
