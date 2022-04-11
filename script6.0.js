@@ -239,4 +239,42 @@ let arr2;
     arr1[0] = 'potatoe'
 })();
 console.log(arr2);//[ 'Jan', 'Feb', 'Mar', 'Apr' ]
-console.log(arr1);
+console.log(arr1);//[ 'potatoe', 'Feb', 'Mar', 'Apr' ]
+
+// The spread operator (...) allows us to quickly copy 
+// all or part of an existing array or object into another 
+// array or object.
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+console.log(numbersCombined);
+
+const str1 = ["Hi", "my name", "is "]
+const str2 = ["Jessika", "V", "Gyllström"]
+const wholeStr = [...str1, ...str2];
+console.log(wholeStr);
+
+/* Destructing
+ We may have an array or object that we are working with, 
+ but we only need some of the items contained in these.
+ Destructuring makes it easy to extract only what is needed.
+ */
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+// the old way
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+// the new way
+// destruction
+const { x: a, y: b, z:c } = voxel;
+
+const AVG_TEMPERATURES = {
+    today: 77.5,
+    tomorrow: 79
+};
+function getTempOfTomorrow(avgTemp) {
+    // use destructuring to get the tomorrow variable of AVG_TEMPERATURES
+    const {tomorrow : tempOfTomorrow} = avgTemp;
+    return tempOfTomorrow;
+}
+console.log(getTempOfTomorrow(AVG_TEMPERATURES));
