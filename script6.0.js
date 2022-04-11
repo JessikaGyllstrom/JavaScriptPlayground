@@ -76,3 +76,13 @@ console.log(chechSign(0));//zero
 console.log(chechSign(2)); //positive
 console.log(chechSign(-2)); //negative
 
+/*  var vs. let
+// you cant declare the let more than once
+// try to only use let and const when you declare variables
+// add "use strict" at start of code
+You can use strict mode in all your programs. 
+It helps you to write cleaner code, like preventing you from 
+using undeclared variables.
+*/
+//let is only accessed in the scope its declared 
+
