@@ -98,10 +98,22 @@ CONST:
 The scope of a const variable is block scope.
 It cannot be declared without initialization.
 */
-const con = "constant";
-//con = "new constant"; //ERRROR
-console.log(con);
+const CONSTANT = "CONSTANT";
+//CONSTANT = "new constant"; //ERRROR
+console.log(CONSTANT);
 
 let lett = "lett";
 lett = "new lett"; //"new lett"
 console.log(lett);
+
+//ALWAYS USE CONST IF YOU KNOW THAT THE VALUE SHOULD NEVER BE CHANGED
+//USE CAPITAL LETTERS
+
+const s = [5, 7, 2];
+function editInPlace(arr) {
+    // ERROR s = [2, 5, 7];
+    s[0] = 2; // this is OK!
+
+    return s;
+}
+console.log(editInPlace(s));
