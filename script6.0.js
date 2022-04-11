@@ -171,4 +171,36 @@ console.log(myConcat([1, 2], [3, 4, 5]));
 
 //BETTER WRITTEN:
 var myCon = (arr1, arr2) => arr1.concat(arr2);
+
 console.log(myCon([1, 2], [3, 4, 5]));
+
+const letters = ["y", "x", "a", "p", "b"];
+letters.sort();
+console.log(letters);
+
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0)
+    .map(x => x * x);
+    return squaredIntegers;
+};
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
+
+// Return an array of all values in ages[] that are 18 or over:
+
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+console.log(result);
+
+// Multiply all the values in an array with 10:
+const numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+
+function myFunction(num) {
+  return num * 10;
+}
