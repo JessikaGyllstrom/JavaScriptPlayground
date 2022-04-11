@@ -281,11 +281,25 @@ console.log(getTempOfTomorrow(AVG_TEMPERATURES));
 
 // destructuring assignment with nested objects
 const LOCAL_FORECAST = {
-    today: {min: 72, max: 83},
+    today: { min: 72, max: 83 },
     tomorrow: {min: 73, max: 84.6}
 };
 function getMaxOfTomorrow(forecast) {
-    const {tomorrow: { max : maxOfTomorrow }} = forecast;
+    const { tomorrow: { max : maxOfTomorrow }} = forecast;
     return maxOfTomorrow;
 }
 console.log(getMaxOfTomorrow(LOCAL_FORECAST));
+
+// destructuring assignment to assign variables from array
+// w & m & o is assigned the values 1 & 2 & 4 in the array
+const [w, m, , o] = [1, 2, 3, 4, 5, 6];
+console.log(w, m, o); // 1, 2, 4
+
+let q = 8;
+let p = 6;
+(() => {
+    // switching the places
+    [q, p] = [p, q]
+})();
+console.log(q); // 6
+console.log(p); // 8 
