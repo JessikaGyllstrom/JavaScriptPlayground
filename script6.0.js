@@ -117,3 +117,35 @@ function editInPlace(arr) {
     return s;
 }
 console.log(editInPlace(s));
+
+//object.freeze will prevent data mutation
+function freezeObj() {
+    'use strict';
+    const MATH_CONSTANT = {
+        PI: 3.14
+    };
+    try {
+        MATH_CONSTANT.PI = 99;
+    } catch (ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANT.PI;
+}
+const PI = freezeObject();
+console.log(PI); // 99
+
+function freezeObject() {
+    'use strict';
+    const MATH_CONSTANTS = {
+        PII: 3.14
+    };
+    Object.freeze(MATH_CONSTANTS);
+    try {
+        MATH_CONSTANTS.PII = 99;
+    } catch (ex) {
+        console.log(ex);
+    }
+    return MATH_CONSTANTS.PII;
+}
+const PII = freezeObject();
+console.log(PII); // 99
