@@ -204,3 +204,29 @@ const newArr = numbers.map(myFunction)
 function myFunction(num) {
   return num * 10;
 }
+
+const increment = (function () {
+    // if a value isnt given it will set to 1
+    return function increment(number, value = 1) {
+        return number + value;
+    };
+})();
+console.log(increment(5, 2));
+console.log(increment(5));
+
+// the rest operator allows you to create a function that takes a 
+// variable number of arguments
+const sum = (function() {
+    return function sum(x, y, z) {
+        const args = [x, y, z];
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(sum(1, 2, 3));
+//the rest-operator ... allows you to pass in any number of args
+const summ = (function() {
+    return function summ(...args) {
+        return args.reduce((a, b) => a + b, 0);
+    };
+})();
+console.log(summ(1, 2, 3, 4, 5, 6));
