@@ -30,6 +30,12 @@ const evenNumbers = oddNumbers.map(number => {
 });
 console.log(evenNumbers);
 
+/* The JSON.parse() method parses a JSON string, 
+constructing the JavaScript value or object described by the string.
+An optional reviver function can be provided to perform a 
+transformation on the resulting object before it is returned.
+*/
+
 const json = '{"result":true, "count":42}';
 const obj = JSON.parse(json);
 
@@ -38,3 +44,20 @@ console.log(obj.count);
 
 console.log(obj.result);
 // expected output: true
+
+
+//nested for loop
+for(let outer = 0; outer < 2; outer += 1) {
+    for(let inner = 0; inner < 3; inner += 1) {
+        console.log(`${outer}` + "-" + `${inner}` );
+    }
+}
+/* output:
+0-0
+0-1
+0-2
+1-0
+1-1
+1-2
+*/ 
+
