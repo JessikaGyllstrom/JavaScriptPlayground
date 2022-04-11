@@ -148,4 +148,17 @@ function freezeObject() {
     return MATH_CONSTANTS.PII;
 }
 const PII = freezeObject();
-console.log(PII); // 99
+console.log(PII); // TypeError: Cannot assign to read only property 
+
+// this is an anonymous function (no name) :
+var magic = function() {
+    return new Date();
+}
+console.log(magic()); //2022-04-11T09:43:03.245Z
+// whenever you have an anonymous function you can convert 
+// it into an arrow-function
+var magic = () => {
+    return new Date();
+}
+// if you only return one value you can simplify it even more:
+var magic = () => new Date();
