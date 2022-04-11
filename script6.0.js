@@ -86,3 +86,22 @@ using undeclared variables.
 */
 //let is only accessed in the scope its declared 
 
+/*
+const is like let
+Variables defined with const cannot be Redeclared.
+Variables defined with const cannot be Reassigned.
+Variables defined with const have Block Scope.
+LET: 
+The scope of a let variable is block scope.
+It can be declared without initialization.
+CONST: 
+The scope of a const variable is block scope.
+It cannot be declared without initialization.
+*/
+const con = "constant";
+//con = "new constant"; //ERRROR
+console.log(con);
+
+let lett = "lett";
+lett = "new lett"; //"new lett"
+console.log(lett);
