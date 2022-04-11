@@ -162,3 +162,13 @@ var magic = () => {
 }
 // if you only return one value you can simplify it even more:
 var magic = () => new Date();
+
+//arrow-functions with parameters
+var myConcat = function(arr1, arr2) {
+    return arr1.concat(arr2);
+}
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+//BETTER WRITTEN:
+var myCon = (arr1, arr2) => arr1.concat(arr2);
+console.log(myCon([1, 2], [3, 4, 5]));
