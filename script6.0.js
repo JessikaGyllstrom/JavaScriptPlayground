@@ -278,3 +278,14 @@ function getTempOfTomorrow(avgTemp) {
     return tempOfTomorrow;
 }
 console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+
+// destructuring assignment with nested objects
+const LOCAL_FORECAST = {
+    today: {min: 72, max: 83},
+    tomorrow: {min: 73, max: 84.6}
+};
+function getMaxOfTomorrow(forecast) {
+    const {tomorrow: { max : maxOfTomorrow }} = forecast;
+    return maxOfTomorrow;
+}
+console.log(getMaxOfTomorrow(LOCAL_FORECAST));
