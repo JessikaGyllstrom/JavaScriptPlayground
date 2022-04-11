@@ -61,3 +61,11 @@ for(let outer = 0; outer < 2; outer += 1) {
 1-2
 */ 
 
+// ternary operator 
+// condition ? statement-if-true : statement-if-false;
+function checkEqual(a, b) {
+    return a === b ? true : false;    
+}
+checkEqual(1,2);
+
+
