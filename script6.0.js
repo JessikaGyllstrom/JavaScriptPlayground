@@ -68,4 +68,11 @@ function checkEqual(a, b) {
 }
 checkEqual(1,2);
 
+//multiple ternary operators
+function chechSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero"
+}
+console.log(chechSign(0));//zero
+console.log(chechSign(2)); //positive
+console.log(chechSign(-2)); //negative
 
