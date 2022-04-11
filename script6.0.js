@@ -229,4 +229,14 @@ const summ = (function() {
         return args.reduce((a, b) => a + b, 0);
     };
 })();
-console.log(summ(1, 2, 3, 4, 5, 6));
+console.log(summ(1, 2, 3, 4, 5, 6)); //21
+
+// the spread operator, expands an already exsisting array
+const arr1 = ["Jan", "Feb", "Mar", "Apr"];
+let arr2;
+(function() {
+    arr2 = [...arr1];
+    arr1[0] = 'potatoe'
+})();
+console.log(arr2);//[ 'Jan', 'Feb', 'Mar', 'Apr' ]
+console.log(arr1);
