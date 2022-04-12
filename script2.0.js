@@ -40,3 +40,30 @@ The Document Object Model (DOM) is a programming interface for web documents.
 It represents the page so that programs can change the document structure, 
 style, and content. The DOM represents the document as nodes and objects; 
 that way, programming languages can interact with the page.*/
+
+//TARGETING DOM ELEMENTS
+document.getElementsByTagName('p');
+//tagets element with id hello
+document.getElementById('hello');
+document.querySelectorAll('#hello')
+
+/*Event handlers can be used to handle and verify user input, 
+user actions, and browser actions: Things that should be done 
+every time a page loads. Things that should be done when the page 
+is closed. Action that should be performed when a user clicks a button.*/
+
+/*try not to put onclick in html file
+HTML:
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="kia">Kia</option>
+</select> 
+JS: */
+var select = document.getElementsByName('cars'[0]);
+select.onclick = function(event) {
+    console.log(event);
+};
+select.addEventListener('click', function (event) {
+    console.log('clicked by event listener');
+});

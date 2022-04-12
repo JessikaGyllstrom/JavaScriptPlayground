@@ -120,7 +120,3 @@ function change(num) {
 }
 changed = changed(3); //5 is now stored in variable changed
 
-// in computer science a cue is an abstract data structure 
-//where items are kept in order
-// new items can be added to the back of the cue
-// old items can be taken off from the front of the cue
