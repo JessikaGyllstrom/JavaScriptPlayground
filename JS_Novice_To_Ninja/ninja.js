@@ -42,4 +42,18 @@ console.log("Hello".concat(" ", "World", "!")); //Hello World!
 let hello = "     Hello World     ".trim();
 console.log(hello); //"Hello"
 // the repeat() method will repeat a string
-console.log("Hey".repeat(3));
+console.log("Hey ".repeat(3)); // Hey hey hey
+/* Template literals are a special types of string that were introduced in ES6. 
+Template literals use the backtick character, ` , to deliminate the string, 
+as shown in the example below: 
+This has the advantage of being able to use both types of quote mark within 
+the string: */
+let templateLiterals = `She said, "It's Me!"`;
+console.log(templateLiterals);
+/*They also allow interpolation of JavaScript code. This means that a JavaScript 
+expression can be inserted inside a string and the result will be displayed, 
+as can be seen in the examples below: */
+const namn = `Siri`;
+/* Template literals can also contain line breaks, which are all converted into 
+a Line Feed (\n):*/
+console.log("This \n ends \n the line");
