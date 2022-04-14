@@ -37,3 +37,9 @@ console.log(nam.endsWith("z")); //false
 //concatenate two or more strings together:
 "Javascript".concat("Ninja"); //JavascriptNinja
 console.log("Hello".concat(" ", "World", "!")); //Hello World! 
+// the trim() method will remove any whitespace from the beginning and end
+// of the string
+let hello = "     Hello World     ".trim();
+console.log(hello); //"Hello"
+// the repeat() method will repeat a string
+console.log("Hey".repeat(3));
