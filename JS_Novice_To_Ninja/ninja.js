@@ -200,3 +200,35 @@ String function:*/
 String(3);//"3"
 //another option is to use the toString() method
 10..toString;//'10'
+
+// parsing numbers
+/* There is also a useful function called parseInt() that can be 
+used to convert a string representation of a numerical value back into a number. */
+parseInt('1010', 2);//converts from binary back to decimal
+parseInt('omg', 36);//31912
+
+
+//UNDEFINED 
+//Undefined is the value given to variables that have not been assigned a value.
+
+//NULL
+//Null means “no value”. It can be thought of as a placeholder that 
+//JavaScript uses to say "there should be a value here, but there isn’t at the moment."
+
+console.log(10+null);//10 Null behaves like zero
+console.log(10+undefined);// NaN undefined is not a number
+//null is coerced to be 0, making the sum possible, whereas undefined is 
+//coerced to NaN, making the sum impossible to perform
+
+//FALSY VALUES
+//only 9 values are always false  & these are known as falsy values
+console.log(Boolean("")); //false: double quoted empty string literal
+console.log(Boolean('')); // false: single quoted empty sting literal
+console.log(Boolean(``)); // false :: empty template literal
+console.log(Boolean(0)); // false
+console.log(Boolean(-0));// false
+console.log(Boolean(NaN));// false
+console.log(Boolean(false));// false
+console.log(Boolean(null));// false
+console.log(Boolean(undefined));// false
+
