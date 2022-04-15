@@ -175,3 +175,16 @@ Number.isFinite(1/0);//false
 Number.isFinite(-Infinity);//false
 Number.isFinite(NaN);//false
 Number.isFinite(42);//true
+
+/*Type coercion happens when the operands of an operator are of different types. 
+In this case, JavaScript will attempt to convert one operand to an equivalent 
+value of the other operand’s type. For example, if you try to multiply a 
+string and a number together, JavaScript will attempt to coerce the string 
+into a number: */
+let multi = '2' * 8; 
+console.log(multi);// 16
+
+/*JavaScript is known as a weakly typed or loosely typed language. 
+This means that you don’t need to explicitly specify what data-type a variable 
+is when you declare it. This can lead to unexpected behavior and hard to find 
+bugs in code, particularly when type-coercion takes place in the background.*/
