@@ -188,3 +188,15 @@ console.log(multi);// 16
 This means that you don’t need to explicitly specify what data-type a variable 
 is when you declare it. This can lead to unexpected behavior and hard to find 
 bugs in code, particularly when type-coercion takes place in the background.*/
+
+/*The best way to change a string to a number is to use the Number method. 
+This will convert the string form of a number into an actual number: */
+Number('23');
+//if the string cannot be converted into a number, NaN is returned
+Number('hello');//NaN
+
+/* The preferred way of changing a number to a string is to use the 
+String function:*/
+String(3);//"3"
+//another option is to use the toString() method
+10..toString;//'10'
