@@ -157,3 +157,21 @@ whereas ++points will increase the value by 1, then return the new value:*/
 let number = 1; 
 number ++;//will return 1 THEN increase number
 ++ number;//will increase number THEN return it
+
+/* Infinity is a special error value in JavaScript that is used to represent 
+any number that is too big for the language to deal with. The biggest number 
+that JavaScript can handle is 1.7976931348623157e+308:*/
+
+/* NaN is an error value that is short for "Not a Number". 
+It is used when an operation is attempted and the result isn’t numerical, 
+like if you try to multiply a string by a number, for example: */
+console.log("hello" * 5); //NaN
+
+/* You can check if a value is a number that can be used by using the 
+Number.isFinite() method. This will return true if the value is a number 
+that isn’t Infinity, -Infinity or NaN:*/
+
+Number.isFinite(1/0);//false
+Number.isFinite(-Infinity);//false
+Number.isFinite(NaN);//false
+Number.isFinite(42);//true
