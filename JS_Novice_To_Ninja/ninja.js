@@ -1,3 +1,25 @@
+/* 
+SUMMARY CHAPTER 1
+
+There are six primitive data types: 
+-strings 
+-symbols 
+-numbers 
+-Booleans,
+-undefined 
+-null 
+
+Non primitive data types, such as arrays, functions and objects, 
+all have a type of object. 
+
+There are only 7 values that are false in JS, "falsy values"
+
+Type coercion is when JS tries to convert a value into another datatype
+in order to perform an operation. 
+*/
+
+
+
 const { picture } = require("caniuse-lite/data/features");
 
 let score = 0; //can be changed
@@ -246,3 +268,14 @@ answer == 5;//true
 //Hard Equality
 /*The hard, or strict, equality operator, ===, tests for equality but 
 only returns true if and only if they are of the same data type:*/
+
+//The only strange result produced by hard equality is this:
+NaN === NaN;//false
+//NaN is the only value in JavaScript that is not equal to itself! 
+//To deal with this, there is a special Number method called Number.isNaN() 
+//to test it:
+
+/* A JavaScript ninja should always use hard equality when testing if 
+two values are equal. This will avoid the problems caused by JavaScript’s 
+type coercion.*/
+
