@@ -98,3 +98,16 @@ console.log(0o47); //39
 
 console.log(0b1010); //10
  // 1 eight, 0 fours, 1 two and 0 units)
+
+ //Exponential Notation
+ /*Numbers can also be represented in exponential notation, 
+ which is shorthand for "multiply by 10 to the power of"...*/
+
+ console.log(1e6); //1000000
+ // means 1 multiplied by 10 to the power 6 (a million)
+
+ console.log(2E3); //2000
+ // 2 multiplied by 10^3 (two thousand)
+
+ console.log(2.5e-3); //0.0025
+// means 2.5 multiplied by 10 to the power -3
