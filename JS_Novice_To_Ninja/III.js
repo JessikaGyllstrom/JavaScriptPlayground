@@ -44,3 +44,15 @@ console.log(q);//2
 console.log(p);//1
 console.log(q);//2
 
+//To find the length of an array, we can use the length property:
+avengers.length;
+
+//The length property can be used as part of the index 
+// to find the last item in an array 
+avengers[avengers.length - 1];
+//The length property is mutable, meaning you can manually change it:
+avengers.length = 2;
+// if you make the array bigger the extra slots will be
+//filled with undefined
+avengers.length = 10;
+console.log(avengers);
