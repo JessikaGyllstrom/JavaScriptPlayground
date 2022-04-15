@@ -57,3 +57,28 @@ const namn = `Siri`;
 /* Template literals can also contain line breaks, which are all converted into 
 a Line Feed (\n):*/
 console.log("This \n ends \n the line");
+//output:
+//this 
+//ends 
+//the line
+
+/* Template literals can be thought of as super-powered strings as they behave 
+in the same way as normal string literals, but with the extra power of string 
+interpolation. For this reason, it is not uncommon to see backticks used to 
+create all strings in ES6 code.*/
+
+//SYMBOLS
+/* They can be used to create unique values, 
+which helps to avoid any naming collisions.*/
+const uniqueID = Symbol();
+// it is recommmended to add a description of the symbol inside the parentheses
+const uniqueId = Symbol('this is a unique ID');
+// because symbols are primitive values the typeof of returns the type of the symbol
+console.log(typeof(uniqueID));//symbol
+//it is possible for two variables to point to the same symbol if the for() method
+// is used when the symbol is created:
+const A = Symbol.for('shared symbol');
+const B = Symbol.for('shared symbol');
+/* The main use-case for symbols is as object property keys, which. 
+The uniqueness of symbols, mean that it’s impossible for the names of 
+any properties to clash with each other if they are symbols.*/
