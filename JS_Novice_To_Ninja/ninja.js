@@ -230,5 +230,19 @@ console.log(Boolean(-0));// false
 console.log(Boolean(NaN));// false
 console.log(Boolean(false));// false
 console.log(Boolean(null));// false
-console.log(Boolean(undefined));// false
+console.log(Boolean(undefined));// 
 
+//Soft Equality
+/* We can check if answer is in fact equal to 5 using the soft, or lenient, 
+equality operator ==, like so:*/
+answer == 5;//true 
+/*This seems to work fine, but unfortunately there are some slight problems
+ when using soft equality:*/
+ answer == '5';//true 
+ /*JavaScript doesn’t take into account the data type and will 
+ attempt to coerce the two values to the same type when doing the comparison. 
+ This can lead to some very strange results:*/
+
+//Hard Equality
+/*The hard, or strict, equality operator, ===, tests for equality but 
+only returns true if and only if they are of the same data type:*/
