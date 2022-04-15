@@ -111,3 +111,19 @@ console.log(0b1010); //10
 
  console.log(2.5e-3); //0.0025
 // means 2.5 multiplied by 10 to the power -3
+
+// the toExponential() returns the number as a string in exponential notation.
+console.log(5..toExponential());  //5e+0
+
+//The toFixed() method rounds a number to a fixed number of decimal places:
+const PI = 3.1415926;
+console.log(PI); //3.1415926
+PI.toFixed(3);
+console.log(PI); //3.141
+// Note that the value is returned as a string, rather than a number.
+
+/* The toPrecision() methos rounds a number to a fixed number of significant
+figures that is returned as a string */
+console.log(325678..toPrecision(2)); // "3.3e+5"
+
+console.log(2.459.toPrecision(2)); // "2.5"
