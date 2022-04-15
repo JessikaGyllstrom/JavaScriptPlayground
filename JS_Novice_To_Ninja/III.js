@@ -55,4 +55,24 @@ avengers.length = 2;
 // if you make the array bigger the extra slots will be
 //filled with undefined
 avengers.length = 10;
-console.log(avengers);
+console.log(avengers); //[ 'captain america', 'iron man', <8 empty items> ]
+
+//Pop, Push, Shift, and Unshift
+
+// to remove the last item from an array: pop() method
+const fruits = ['bananas', 'apples', 'melon', 'pear']
+fruits.pop();//removes pear
+console.log(fruits);//[ 'bananas', 'apples', 'melon' ]
+
+//to remove the first item: shift() method
+fruits.shift();
+console.log(fruits);//[ 'apples', 'melon' ]
+
+//to append a new value at the end of the array
+fruits.push("Kiwi");
+console.log(fruits);//[ 'apples', 'melon', 'Kiwi' ]
+
+//to append a new value at the beginning of an array: unshift();
+fruits.unshift('strawberry');
+console.log(fruits);//[ 'strawberry', 'apples', 'melon', 'Kiwi' ]
+
