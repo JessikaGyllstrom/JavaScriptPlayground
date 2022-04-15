@@ -1,3 +1,5 @@
+const { picture } = require("caniuse-lite/data/features");
+
 let score = 0; //can be changed
 const firstName = "Alexa"; //wont change
 // to see the value of a variable:
@@ -127,3 +129,31 @@ figures that is returned as a string */
 console.log(325678..toPrecision(2)); // "3.3e+5"
 
 console.log(2.459.toPrecision(2)); // "2.5"
+
+//Arithmetic Operations
+console.log(23%6); // the remainder: 5
+
+let points = 1;
+points += 5;
+console.log(points);//6
+points -= 5; 
+console.log(points);//1
+points *= 10; 
+console.log(points);//10
+points /= 2; 
+console.log(points);//5
+points %= 7;//changes the value of points to the remainder it its current
+//value is divided by 7 
+console.log(points);//5
+
+// increment a value by 1:
+points ++;
+console.log(points);//6
+
+/*Both operations increase the value of the points variable by 1, 
+but points++ will return the original value then increase it by 1, 
+whereas ++points will increase the value by 1, then return the new value:*/
+
+let number = 1; 
+number ++;//will return 1 THEN increase number
+++ number;//will increase number THEN return it
