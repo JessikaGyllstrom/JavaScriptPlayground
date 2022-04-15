@@ -1,5 +1,5 @@
 /* 
-SUMMARY CHAPTER 1
+SUMMARY CHAPTER 2
 
 There are six primitive data types: 
 -strings 
@@ -17,8 +17,6 @@ There are only 7 values that are false in JS, "falsy values"
 Type coercion is when JS tries to convert a value into another datatype
 in order to perform an operation. 
 */
-
-
 
 const { picture } = require("caniuse-lite/data/features");
 
