@@ -82,3 +82,19 @@ const B = Symbol.for('shared symbol');
 /* The main use-case for symbols is as object property keys, which. 
 The uniqueness of symbols, mean that it’s impossible for the names of 
 any properties to clash with each other if they are symbols.*/
+
+//numbers 
+// check if a number is an integer
+Number.isInteger(42);//true
+Number.isInteger(3.142); //false
+/* If a number starts with a 0x, it is considered to be in
+ hexadecimal (base 16) notation: */
+ console.log(0xAF); // 175
+ //A represents 10, F represents 15
+ /* If a number starts with a zero, followed by the
+letter o, then it is considered to be in octal (base 8) notation:*/
+console.log(0o47); //39
+// 4 eights and 7 units
+
+console.log(0b1010); //10
+ // 1 eight, 0 fours, 1 two and 0 units)
