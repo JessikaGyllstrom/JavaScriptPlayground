@@ -295,4 +295,56 @@ let array = [1,2,3];
 const strong = new Set().add(array);
 
 array = null; // remove the reference to the original
-console.log(strong);
+console.log(array);//null
+console.log(strong);//[ 1, 2, 3 ] 
+//The array still exists inside the set and we can get the
+// original value of array back using the spread operator:
+array = [...strong][0];
+console.log(array);//[ 1, 2, 3 ] 
+
+/*
+A memory leak occurs when a program retains references 
+to values that can no longer be accessed in its memory. 
+This means that memory is being used to store values that 
+are no longer required by the program, effectively wasting 
+system resources.
+Memory leaks can cause problems by gradually reducing the 
+overall memory available, which can cause the program, 
+or even the entire system, to run more slowly.
+Most modern programming language, including JavaScript,
+employ various dynamic memory management techniques such 
+as garbage collection, which is the process of automatically
+removing items from memory that are no longer required
+ by the program. Some languages, such as C++, require 
+ the programmer to manually manage memory by removing 
+ items from memory once they are finished with.
+ Weak sets avoid this situation by garbage collecting 
+ any references to a “dead object” that’s had its original 
+ reference removed.*/
+
+ const weak = new WeakSet();
+
+ /* MAPS
+ Maps were another data structure introduced in the ES6 specification. They are a convenient way of keeping a list of key and value pairs, and are similar to “hashes”, or“hash tables” or “dictionaries” in other programming languages.
+const array = [1,2,3];
+weak.add(array);
+<< WeakSet {}
+weak.has(array);
+<< true
+weak.delete(array);
+<< true
+weak.has(array);
+<< false
+
+ At first glance, maps appear to be similar to JavaScript objects (covered in Chapter 5), but they have some noticeable differences:
+Objects are limited to using strings for key values, whereas maps can use any data type as a key.
+There is no efficient way to find the number of key-value pairs an object has, whereas this is easy to do with maps using the size property.
+Objects have methods that can be called (see Chapter 5) and prototypes that can be used to create a chain of inheritance (see Chapter 12), whereas maps are solely focused on the storage and retrieval of key-value pairs.
+The value of an object’s properties can be accessed directly, whereas maps restrict you to using the get() method to retrieve any values.
+*/
+
+//creating maps
+const romanNumberals = new Map();
+// the set() method can be used to add a key and value pair to a map
+romanNumberals.set(1, 'I');
+console.log(romanNumberals); // Map(1) { 1 => 'I' }
