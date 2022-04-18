@@ -1,3 +1,4 @@
+const cssConicGradients = require("caniuse-lite/data/features/css-conic-gradients");
 const { x } = require("caniuse-lite/dist/lib/supported");
 
 const myArray = [];
@@ -75,4 +76,17 @@ console.log(fruits);//[ 'apples', 'melon', 'Kiwi' ]
 //to append a new value at the beginning of an array: unshift();
 fruits.unshift('strawberry');
 console.log(fruits);//[ 'strawberry', 'apples', 'melon', 'Kiwi' ]
+
+//merging arrays
+// the concat() method can be used to merge an array with one or more arrays
+let monsters = ['frankenstein', 'dracula', 'wolfman'];
+monsters.concat(["hulk", "black widow"]);
+console.log(monsters); //[ 'frankenstein', 'dracula', 'wolfman' ]
+
+/* Note that this does not change the avengers array, 
+it simply creates another array combining the two arrays. 
+You can use assignment to update the avengers array to this new array: */
+monsters = monsters.concat(["mummy", "creatue"]);
+console.log(monsters); //[ 'frankenstein', 'dracula', 'wolfman', 'mummy', 'creatue' ]
+
 
