@@ -180,3 +180,8 @@ actors.sort();
 console.log(actors); // [ 'Brad Pitt', 'Jason Mamoa', 'Tom Hardy' ]
 
 //Finding if a Value is in an Array
+console.log(actors.indexOf('Jason Mamoa')); //
+//includes() method. This returns a boolean value depending on whether 
+// the array contains a particular element or not:
+console.log(actors.includes('Brad Pitt'));//true
+console.log(actors.includes('Thor'));//false
