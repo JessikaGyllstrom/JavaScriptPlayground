@@ -208,4 +208,35 @@ const summer = ['Jun', 'Jul', 'Aug'];
 const winter = ['Dec', 'Jan', 'Feb'];
 const nested = [ summer, winter ];
 const flat = [...summer, ...winter];
-console.log(flat);// [ 'Jun', 'Jul', 'Aug', 'Dec', 'Jan', 'Feb' ]
+console.log(flat); // [ 'Jun', 'Jul', 'Aug', 'Dec', 'Jan', 'Feb' ]
+
+/* A set is a data structure that represents a collection
+ of unique values, so it cannot include any duplicate values.*/
+ const list = new Set();
+ list.add(1);
+ list.add(2);
+ list.add(3).add(4);
+ console.log(list); //Set(4) { 1, 2, 3, 4 }
+
+ // If you try to add a value that is already contained in the set, then the operation is simply ignored:
+list.add(1);
+
+//Multiple values can be added to a set in one go by placing them inside an array that is provided as an argument:
+list.add([5,6,7]);
+console.log(list); //Set(5) { 1, 2, 3, 4, [ 5, 6, 7 ] }
+
+const moreNumbers = new Set([7,7,7,7,7,8,8,8,9,9]);
+console.log(moreNumbers);
+
+//If a string is used as the argument then each character will be added as a separate element, with any repeated characters ignored:
+const letters = new Set('hello');
+console.log(letters); //Set(4) { 'h', 'e', 'l', 'o' }
+
+//If you want to add separate words, you need to use the add() method:
+const words = new Set().add('the').add('quick').add('brown').add('fox');
+console.log(words); //Set(4) { 'the', 'quick', 'brown', 'fox' }
+
+
+
+const arrays = new Set().add([1]).add([1]);
+console.log(arrays);
