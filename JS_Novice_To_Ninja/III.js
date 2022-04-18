@@ -92,3 +92,15 @@ console.log(monsters); //[ 'frankenstein', 'dracula', 'wolfman', 'mummy', 'creat
 // An alternative is to use the new spread operator that was added to ES6. The spread operator is three dots
 monsters = [... monsters,  ...["bride", "invisible man"]];
 console.log(monsters); // console.log(monsters);
+
+//The join() method can be used to turn the array into a string that comprises all
+// the items in the array, separated by commas:
+monsters.join();
+console.log(monsters); 
+
+
+// You can choose a separator other than a comma by placing it inside the parentheses.
+// Let’s try using an ampersand:
+
+monsters.join('&');
+console.log(monsters); 
