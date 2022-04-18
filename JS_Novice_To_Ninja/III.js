@@ -104,3 +104,8 @@ console.log(monsters);
 
 monsters.join('&');
 console.log(monsters); 
+
+/* SLICE 
+The slice() method creates a subarray; effectively chopping 
+out a slice of an original array */
+console.log(monsters.slice(0, 4));
