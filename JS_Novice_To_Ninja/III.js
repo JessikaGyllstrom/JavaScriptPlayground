@@ -89,4 +89,6 @@ You can use assignment to update the avengers array to this new array: */
 monsters = monsters.concat(["mummy", "creatue"]);
 console.log(monsters); //[ 'frankenstein', 'dracula', 'wolfman', 'mummy', 'creatue' ]
 
-
+// An alternative is to use the new spread operator that was added to ES6. The spread operator is three dots
+monsters = [... monsters,  ...["bride", "invisible man"]];
+console.log(monsters); // console.log(monsters);
