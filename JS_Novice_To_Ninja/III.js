@@ -1,3 +1,4 @@
+const { C } = require("caniuse-lite/data/agents");
 const cssConicGradients = require("caniuse-lite/data/features/css-conic-gradients");
 const { x } = require("caniuse-lite/dist/lib/supported");
 
@@ -348,3 +349,31 @@ const romanNumberals = new Map();
 // the set() method can be used to add a key and value pair to a map
 romanNumberals.set(1, 'I');
 console.log(romanNumberals); // Map(1) { 1 => 'I' }
+romanNumberals.set(2,'II').set(3,'III').set(4,'IV').set(5,'V')
+
+// Map methods 
+// A map is a bit like a dictionary where you can look up 
+// a value based on the key. To look up a value, we can 
+// use the get() method:
+
+romanNumberals.get(0); // Map(1) { 1 => 'I' }
+
+// The has() method can be used to check if a particular 
+// key is in a map. This returns a boolean value of true 
+// or false:
+console.log(romanNumberals.has(5));//true
+console.log(romanNumberals.has(25));//false
+// Removing Entries From Maps
+// The delete() method can be used to remove a key and value 
+// pair from a map. This returns a boolean value of true if 
+// the value was removed or false if it wasn’t in the map. 
+// To delete a specific value, you need to specify the key in parentheses:
+console.log(romanNumberals.delete(1)); 
+console.log(romanNumberals); //Map(4) { 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' }
+//the clear() method will remove all key and value pairs from a map
+romanNumberals.clear();
+console.log(romanNumberals); //Map(0) {}
+
+//CONVERTING MAPS TO ARRAYS 
+/* Maps can be converted into a nested array of key-value pairs in a similar way to sets;
+ using either the spread operator: */
