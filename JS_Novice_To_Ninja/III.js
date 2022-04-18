@@ -259,3 +259,11 @@ from a set. This returns a boolean value of true if the value
 console.log(jla.delete('Superman')); //true
 console.log(jla.delete('Flash')); //false
 //The clear() method can be used to remove all values from a set:
+
+//Converting Sets to Arrays
+//A set can be converted into an array by placing the set, along with the spread operator directly inside an array literal.
+const shoppingSet = new Set().add('Apples').add('Bananas').add('Beans');
+console.log(shoppingSet);
+//then we convert it to an array
+const shoppingArray = [...shoppingSet];
+console.log(shoppingArray); // [ 'Apples', 'Bananas', 'Beans' ]
