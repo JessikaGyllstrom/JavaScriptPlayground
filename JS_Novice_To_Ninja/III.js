@@ -250,3 +250,12 @@ console.log(jla.size);// 3
 // boolean value of true or false:
 console.log(jla.has('Superman')); // true
 console.log(jla.has('Green Lantern')); // false
+
+// Removing Values From Sets
+/* The delete() method can be used to remove a value 
+from a set. This returns a boolean value of true if the value
+ was removed from the set, or false if the value wasn’t in the 
+ set and couldn’t be removed: */
+console.log(jla.delete('Superman')); //true
+console.log(jla.delete('Flash')); //false
+//The clear() method can be used to remove all values from a set:
