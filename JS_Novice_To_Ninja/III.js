@@ -108,4 +108,18 @@ console.log(monsters);
 /* SLICE 
 The slice() method creates a subarray; effectively chopping 
 out a slice of an original array */
-console.log(monsters.slice(0, 4));
+console.log(monsters.slice(0, 4));//[ 'frankenstein', 'dracula', 'wolfman', 'mummy' ]
+// Note that this operation is non-destructive ― no items are actually removed from the array
+
+/* The splice() method removes items from an array then inserts new items in their place.*/
+monsters.splice(0, 1, 'Scarlet Witch');
+console.log(monsters); 
+/*
+'Scarlet Witch',
+'dracula',
+'wolfman',
+'mummy',
+'creatue',
+'bride',
+'invisible man'
+*/
