@@ -245,3 +245,8 @@ console.log(arrays); // Set(2) { [ 1 ], [ 1 ] }
 //The number of values in a set can be found using the size() method:
 const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');
 console.log(jla.size);// 3
+
+// The has() method can be used to check if a value is in a set. This returns a
+// boolean value of true or false:
+console.log(jla.has('Superman')); // true
+console.log(jla.has('Green Lantern')); // false
