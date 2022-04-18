@@ -239,4 +239,9 @@ console.log(words); //Set(4) { 'the', 'quick', 'brown', 'fox' }
 
 
 const arrays = new Set().add([1]).add([1]);
-console.log(arrays);
+console.log(arrays); // Set(2) { [ 1 ], [ 1 ] }
+
+
+//The number of values in a set can be found using the size() method:
+const jla = new Set().add('Superman').add('Batman').add('Wonder Woman');
+console.log(jla.size);// 3
