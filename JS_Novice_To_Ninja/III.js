@@ -267,3 +267,7 @@ console.log(shoppingSet);
 //then we convert it to an array
 const shoppingArray = [...shoppingSet];
 console.log(shoppingArray); // [ 'Apples', 'Bananas', 'Beans' ]
+
+//It's also possible to use the Array.from() method to convert a set into an array.
+const shoppingArr = Array.from(shoppingSet);
+console.log(shoppingArr);
