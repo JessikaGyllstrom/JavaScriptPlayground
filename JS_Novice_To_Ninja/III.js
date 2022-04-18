@@ -271,3 +271,28 @@ console.log(shoppingArray); // [ 'Apples', 'Bananas', 'Beans' ]
 //It's also possible to use the Array.from() method to convert a set into an array.
 const shoppingArr = Array.from(shoppingSet);
 console.log(shoppingArr);
+
+/*
+By combining this use of the spread operator with the ability 
+to pass an array to the new Set() constructor, we now have a 
+convenient way to create a copy of an array with any duplicate 
+values removed: 
+*/
+const duplicate = [3, 1, 4, 1, 5, 9, 2, 6 ,5,3,5,9]; //[ 3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 9 ]
+const nonDuplicate = [...new Set(duplicate)];// [ 3, 1, 4, 5, 9, 2, 6 ]
+
+console.log(nonDuplicate);//  3, 1, 4, 5, 9, 2, 6
+
+/* weak sets
+When objects are added to sets, they will be stored there 
+as long as the set exists, even if the original reference 
+ the object is removed. The technical term for this is the 
+ object is prevented from being garbage-collected, which 
+ can cause a memory leak. This can be seen in the following 
+ example:
+ */
+let array = [1,2,3];
+const strong = new Set().add(array);
+
+array = null; // remove the reference to the original
+console.log(strong);
