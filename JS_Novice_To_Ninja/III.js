@@ -185,3 +185,27 @@ console.log(actors.indexOf('Jason Mamoa')); //
 // the array contains a particular element or not:
 console.log(actors.includes('Brad Pitt'));//true
 console.log(actors.includes('Thor'));//false
+
+//You can even have an array of arrays, known as a multidimensional array. 
+const coordinates = [[1,3],[4,2]];
+
+/*
+To access the values in a multidimensional array, 
+we use two indices: one to refer to the item’s place 
+in the outer array, and one to refer to its place in the 
+inner array: */
+console.log(coordinates[0][0]); // The first value of the first array
+// 1
+console.log(coordinates[1][0]); // The first value of the second array
+// 4
+console.log(coordinates[0][1]); // The second value of the first array
+//3
+
+/* The spread operator that we met earlier can be used to flatten 
+multi-dimensional arrays. Flattening an array involves removing 
+all nested arrays so all the values are on the same level in the array */
+const summer = ['Jun', 'Jul', 'Aug'];
+const winter = ['Dec', 'Jan', 'Feb'];
+const nested = [ summer, winter ];
+const flat = [...summer, ...winter];
+console.log(flat);// [ 'Jun', 'Jul', 'Aug', 'Dec', 'Jan', 'Feb' ]
