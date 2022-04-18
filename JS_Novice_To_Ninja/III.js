@@ -160,4 +160,23 @@ console.log(monsters);
   'mummy',
   'creatue',
   'bride',
-  'invisible man'*/
+  'invisible man'
+*/
+//We can reverse the order of an array using the reverse() method:
+monsters.reverse();
+console.log(monsters); 
+/*   
+  'invisible man',
+  'bride',
+  'creatue',
+  'mummy',
+  'wolfman',
+  'Scarlet Witch',
+  'Frankenstein'
+*/
+// We can sort the order of an array using the sort() method:
+let actors = ['Tom Hardy', 'Jason Mamoa', 'Brad Pitt'];
+actors.sort();
+console.log(actors); // [ 'Brad Pitt', 'Jason Mamoa', 'Tom Hardy' ]
+
+//Finding if a Value is in an Array
