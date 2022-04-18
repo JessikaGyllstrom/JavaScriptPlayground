@@ -112,6 +112,11 @@ console.log(monsters.slice(0, 4));//[ 'frankenstein', 'dracula', 'wolfman', 'mum
 // Note that this operation is non-destructive ― no items are actually removed from the array
 
 /* The splice() method removes items from an array then inserts new items in their place.*/
+/*
+The first number in the parentheses tells us the index at which to start the splice. 
+In the example we started at index 3, which is the fourth item in the array (Hulk). 
+The second number tells us how many items to remove from the array. 
+In the example, this was just one item.*/
 monsters.splice(0, 1, 'Scarlet Witch');
 console.log(monsters); 
 /*
@@ -123,3 +128,36 @@ console.log(monsters);
 'bride',
 'invisible man'
 */
+/* The splice() method can also be used to insert values into an array 
+at a specific index without removing any items, by indicating that zero 
+items are to be removed: */ 
+monsters.splice(0, 0, 'Frankenstein');
+console.log(monsters); 
+/*
+'Frankenstein',
+  'Scarlet Witch',
+  'dracula',
+  'wolfman',
+  'mummy',
+  'creatue',
+  'bride',
+  'invisible man'
+*/
+
+/*
+We saw earlier that we can use the delete operator 
+to remove an item from an array. Unfortunately, this leaves 
+a value of undefined in its place. If you want to
+remove a value completely, you can use the splice() method 
+with a length of 1 and without specifying any values to add:*/
+//thos will remove the item att index 2
+monsters.splice(2,1);
+console.log(monsters); 
+/*
+  'Frankenstein',
+  'Scarlet Witch',
+  'wolfman',
+  'mummy',
+  'creatue',
+  'bride',
+  'invisible man'*/
