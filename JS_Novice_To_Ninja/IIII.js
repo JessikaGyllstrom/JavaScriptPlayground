@@ -1,5 +1,9 @@
 //LOGIC 
 
+/* SUMMARY
+Sets are ordered lists of non-duplicate values
+Maps are ordered lists of key-value pairs
+
 //Ternary operator
 // as shorthand way of writing an if...else statement
 // Syntax:
@@ -68,3 +72,37 @@ e
 l
 o
 */
+// Note that weak sets are non-enumerable, 
+// so it’s not possible to loop over them in this way.
+
+//LOOPING OVER MAPS
+const romanNumerals = new Map(); romanNumerals.set(1,'I').set(2,'II').set(3,'III').set(4,'IV').set(5,'V');
+console.log(romanNumerals); //Map(5) { 1 => 'I', 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' }
+for(const key of romanNumerals.keys()) {
+    console.log(key); //1, 2, 3, 4, 5, 6
+}
+
+//There is also a values() method that lets us iterate over the values in a similar way:
+for(const value of romanNumerals.values()) {
+    console.log(value);
+}
+/* 
+I
+II
+III
+IV
+V
+*/
+
+//If you want to access both the key and the value, you can use the entries() method:
+for(const [key,value] of romanNumerals.entries()) {
+    console.log(`${key} in Roman numerals is ${value}`);
+}
+/*
+1 in Roman numerals is I
+2 in Roman numerals is II
+3 in Roman numerals is III
+4 in Roman numerals is IV
+5 in Roman numerals is V
+*/
+//Note that weak maps are also non-enumerable, so it isn’t possible to loop over them using any of the methods shown above.
