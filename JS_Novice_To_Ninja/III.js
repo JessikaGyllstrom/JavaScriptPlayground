@@ -370,10 +370,32 @@ console.log(romanNumberals.has(25));//false
 // To delete a specific value, you need to specify the key in parentheses:
 console.log(romanNumberals.delete(1)); 
 console.log(romanNumberals); //Map(4) { 2 => 'II', 3 => 'III', 4 => 'IV', 5 => 'V' }
+
 //the clear() method will remove all key and value pairs from a map
-romanNumberals.clear();
-console.log(romanNumberals); //Map(0) {}
+
+//romanNumberals.clear();
+//console.log(romanNumberals); //Map(0) {}
+
 
 //CONVERTING MAPS TO ARRAYS 
 /* Maps can be converted into a nested array of key-value pairs in a similar way to sets;
  using either the spread operator: */
+ // Maps can be converted into a nested array of key-value pairs in a similar way to sets; using either the spread operator:
+ const convertedMap =  [...romanNumberals];
+ console.log(convertedMap);
+
+//converting map to array with the Array.from() method
+const myArr = Array.from(romanNumberals);
+console.log(myArr);
+
+/*
+Weak Maps
+Weak maps work in the same way as weak sets. 
+They are the same as maps, except their keys cannot 
+be primitives, and the garbage collector will automatically 
+remove any dead entries when the reference to the original 
+object is deleted.
+To create a weak map, the new operator is used along with 
+the WeakMap() constructor:
+
+const weak = new WeakMap();*/
