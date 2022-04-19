@@ -270,3 +270,24 @@ cat at place 1 is ragdoll
 cat at place 2 is bengal
 cat at place 3 is maine coon
 */
+
+/* map()
+The map() method is very similar to the forEach() method. 
+It also iterates over an array, and takes a callback 
+function as a parameter that is invoked on each item 
+in the array. */
+console.log([1,2,3].map( square ));
+console.log([1,2,3].map( x => 2 * x));
+/*
+Reduce()
+The reduce() method is another method that iterates 
+over each value in the array, but this time it 
+cumulatively combines each result to return just a 
+single value. The callback function is used to describe 
+how to combine each value of the array with the running 
+total. */
+
+const sentence = 'The quick brown fox jumped over the lazy dog';
+// The sentence can be converted into an array using the split() method:
+let sentArray = sentence.split();
+console.log(sentArray); // [ 'The quick brown fox jumped over the lazy dog' ]
