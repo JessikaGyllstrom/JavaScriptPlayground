@@ -1,4 +1,27 @@
 //FUNCTIONS
+
+/* 
+SUMMARY
+* functions are first class objects that behave the same way as the other values
+* function literals can be defined useing the function declaration, 
+or by creating a function expression by assifninf an anonymous function to a variable
+* all functions return a value. If it is not explicitly stated the function
+will return undefined
+* a parameter is a value that is written in the parentheses of a function
+declaration and can be used like a variable inside the functions body
+* an argument is a value that is provided to a function when its invoked
+* the arguments variable is an array-like object that allows
+access to each argument provided to the function using index notation
+* the rest operator can be used to access multiple arguments in an array
+* default arguments can be supplied to a function by assigning them to the parameters
+* arrow functions are a shorthand notation thatcan be used to write anonymous functions
+* Function declarations can be invoked before they are defined because they are hoisted 
+to the top of the scope, but function expressions cannot be invoked until after they 
+are defined.
+* A callback is a function that is provided as an argument to another function.
+*/
+
+
 /* In JavaScript, functions are considered to be first-class 
 objects. This means they behave in the same way as all the 
 other primitive data types and objects in the language. 
@@ -291,5 +314,17 @@ const sentence = 'The quick brown fox jumped over the lazy dog';
 // The sentence can be converted into an array using the split() method:
 let sentArray = sentence.split();
 console.log(sentArray); // [ 'The quick brown fox jumped over the lazy dog' ]
-const total = sentArray.reduce( (acc,sentArray) => acc + sentArray.length,0 );
-console.log(total);
+// calculate the total number of letters in the sentence
+//const total = sentArray.reduce( (acc,sentArray) => acc + sentArray.length,0 );
+//console.log(total);//44
+/*
+Filter()
+The filter() method returns a new array that only contains 
+items from the original array that return true when passed 
+to the callback. For example, we can filter an array of 
+numbers to just the even numbers using the following code: */
+
+const numbers = [ 2, 7, 6, 5, 11, 23, 12 ]
+ console.log(numbers.filter(x => x%2 === 0 )); // this returns true if the number is even
+// 2, 6, 12
+
