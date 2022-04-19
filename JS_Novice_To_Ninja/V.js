@@ -121,3 +121,27 @@ function hello(name='World') {
 hello();//'Hello World!'
 
 hello('universe');// Hello universe!
+
+/* Default parameters should always come after non-default
+ parameters, otherwise default values will always have to 
+ be entered anyway. Consider the following function for 
+ calculating a discounted price in a store: */
+
+/*
+This function takes two arguments: the price of an item 
+and the percentage discount to be applied. The store’s most
+common discount is 10%, so this is provided as a default 
+value. This means that the amount argument can be omitted
+in most cases and a 10% discount will still be applied:
+If a different discount is applied, the amount 
+can be provided:
+This will fail to work, however, if the parameters are
+reversed:
+Now if we try to use the function with just one argument,
+the function won’t work, because price has not been set: */
+
+function discount(price, amount=10) {
+    return price*(100-amount)/100;
+}
+console.log(discount(20)) // standard discount of 10%, 18
+console.log(discount(15, 20)) // standard discount of 20%
