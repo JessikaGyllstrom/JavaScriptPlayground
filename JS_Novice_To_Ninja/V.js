@@ -185,3 +185,22 @@ console.log('Hoist Me!');
 function definitions can be placed together, possibly 
 at the end of a program, rather than having to define 
 every function before it is used. */
+
+console.log(name); // will return undefined before ➥ assignment
+// variable is defined here
+var name = 'Alexa';
+
+//CALLBACKS
+/* functions can also be given as a parameter to another function. 
+A function that is passed as an argument to another is known 
+as a callback. */
+function sing(song) {
+    console.log(`I'm singing along to ${song}`);
+}
+sing('Let It Go'); //I'm singing along to Let It Go
+
+// We can make the sing() function more flexible by adding a callback parameter:
+function sing(song,callback) {
+    console.log(`I'm singing along to ${song}.`);
+    callback();
+}
