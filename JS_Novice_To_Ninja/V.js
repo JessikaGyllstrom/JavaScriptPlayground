@@ -160,3 +160,28 @@ console.log(sq(15));//225
 
 const add = (x,y) => x + y;
 console.log(add(5,2));
+
+/*
+Function Hoisting
+Hoisting is the JavaScript interpreter’s action of moving 
+all variable and function declarations to the top of the 
+current scope, regardless of where they are defined.
+Functions that are defined using a function declaration 
+are automatically hoisted, meaning they can be invoked 
+before they have been defined. For example, in the 
+following code the function hoist() can be invoked 
+before it is actually defined: */
+
+// function is invoked at the start of the code
+hoist();
+// ...
+// ... lots more code here
+// ...
+// function definition is at the end of the code
+function hoist(){
+console.log('Hoist Me!');
+}
+/* This can be quite useful as it means that all 
+function definitions can be placed together, possibly 
+at the end of a program, rather than having to define 
+every function before it is used. */
