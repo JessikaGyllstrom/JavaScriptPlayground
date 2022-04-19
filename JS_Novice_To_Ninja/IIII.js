@@ -35,10 +35,36 @@ for(let i=1 ; j<13 ; i++){
 // The outer loop counts up from i=1 to i=12. 
 // For every iteration of the outer loop, the inner loop counts up from j=1 to j=12. This means that it starts in the first iteration with i = 1 and j = 1
 
-let str = "";
-for (k = 0; k < 5; k++) {
-    for (m = 0; m < 2; m++) {
-    str += "The number is k = " + k + " and m = " + m  + "\n";
-    console.log(str);
+
+for (let i = 0; i <= 2; i++) {
+    console.log("- First level loop");
+    for (let j = 0; j <= 3; j++) {
+      console.log("-- Second level loop");
     }
 }
+
+//LOOPING OVER ARRAYS
+const arr = [1, 2, 3, 4, 5, 6,]
+for(let i=0, max=arr.length; i < max; i++){
+    console.log(arr[i]);
+}
+//FOR OF LOOP
+//This replaces all of the setup of a ‘for’ loop with a variable 
+// (value in the example above) that represents the value of each 
+// element in the array. Note that this variable needs to be declared 
+// using const
+for(const value of arr){
+    console.log(value);
+}
+
+//LOOPING OVER SETS
+const letters = new Set('hello');
+for(const letter of letters) {
+    console.log(letter);
+}
+/* 
+h
+e
+l
+o
+*/
