@@ -231,7 +231,42 @@ function numerically(a,b) {
 }
 console.log([1,3,12,5,23,18,7].sort(numerically));
 /*
-
    1,  3,  5, 7,
   12, 18, 23
   */
+
+const colors = ['Red', 'Green', 'Blue']
+for(let i = 0, max = colors.length ; i < max ; i++ ) {
+    console.log(`Color at position ${i} is ${colors[i]}`);
+}
+/*
+Color at position 0 is Red
+Color at position 1 is Green
+Color at position 2 is Blue
+*/
+colors.forEach( (color,index) =>
+    console.log(`Color at position ${index}  is ${color}`) );
+/*
+Color at position 0  is Red
+Color at position 1  is Green
+Color at position 2  is Blue
+*/
+const cats = ['siamese', 'ragdoll', 'bengal', 'maine coon'];
+
+for(let i = 0, max = cats.length ; i < max ; i++ ) {
+    console.log(`Cat at index ${i} is ${cats[i]}`);
+}
+/*
+Cat at index 0 is siamese
+Cat at index 1 is ragdoll
+Cat at index 2 is bengal
+Cat at index 3 is maine coon
+*/
+cats.forEach ((cats, index) =>
+console.log(`cat at place ${index} is ${cats}`) );
+/*
+cat at place 0 is siamese
+cat at place 1 is ragdoll
+cat at place 2 is bengal
+cat at place 3 is maine coon
+*/
