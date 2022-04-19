@@ -291,3 +291,5 @@ const sentence = 'The quick brown fox jumped over the lazy dog';
 // The sentence can be converted into an array using the split() method:
 let sentArray = sentence.split();
 console.log(sentArray); // [ 'The quick brown fox jumped over the lazy dog' ]
+const total = sentArray.reduce( (acc,sentArray) => acc + sentArray.length,0 );
+console.log(total);
