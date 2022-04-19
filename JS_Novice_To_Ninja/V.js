@@ -5,6 +5,8 @@ other primitive data types and objects in the language.
 They can be be assigned to variables, stored in arrays 
 and can even be returned by another functions.*/
 
+const { S } = require("caniuse-lite/data/agents");
+
 function hello(){
     console.log('Hello World!');
 }
@@ -145,3 +147,16 @@ function discount(price, amount=10) {
 }
 console.log(discount(20)) // standard discount of 10%, 18
 console.log(discount(15, 20)) // standard discount of 20%
+
+//ARROW FUNCTIONS
+// These make declaring functions much more succinct by using less verbose syntax.
+// Arrow functions can be identified by the arrow symbol, => that gives them their name. 
+// The parameters come before the arrow and the main body of the function comes after. 
+// Arrow functions are always anonymous, so if you want to refer to them, you must assign 
+// them to a variable. For example, the square function we wrote earlier can be written like so:
+const sq = x => x*x;
+console.log(sq(5));//25
+console.log(sq(15));//225
+
+const add = (x,y) => x + y;
+console.log(add(5,2));
