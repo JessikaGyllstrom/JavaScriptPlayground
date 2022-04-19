@@ -199,8 +199,39 @@ function sing(song) {
 }
 sing('Let It Go'); //I'm singing along to Let It Go
 
-// We can make the sing() function more flexible by adding a callback parameter:
-function sing(song,callback) {
-    console.log(`I'm singing along to ${song}.`);
+
+/*
+A callback is a function passed as an argument to another function
+This technique allows a function to call another function
+A callback function can run after another function has finished */
+
+// function
+function greet(name, callback) {
+    console.log('Hi' + ' ' + name);
     callback();
 }
+// callback function
+function callMe() {
+    console.log('I am callback function');
+}
+// passing function as an argument
+greet('Peter', callMe);
+
+//Sorting Arrays With A Callback
+//Here’s an example of a numerically function that can be 
+//used as a callback to sort numbers:
+/*
+This simply subtracts the two numbers that are being 
+compared, giving a result that is either negative 
+(if b is bigger than a), zero 
+(if a and b are the same value), or positive 
+(if a is bigger than b).*/
+function numerically(a,b) {
+    return a-b;
+}
+console.log([1,3,12,5,23,18,7].sort(numerically));
+/*
+
+   1,  3,  5, 7,
+  12, 18, 23
+  */
