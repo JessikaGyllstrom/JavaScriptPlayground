@@ -111,3 +111,11 @@ so parentheses need to be placed after the method name:
 */
 
 console.log(superman.fly()); // up up and away
+//checking if properties or methods exist
+console.log('city' in superman);//false
+//alternatively you could see if the property or method
+// doesnt return undefined
+console.log(superman.city !== undefined); //fasle
+//another way is to use tje hasOwnProperty() method
+console.log(superman.hasOwnProperty('city')); // false
+
