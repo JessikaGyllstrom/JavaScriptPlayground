@@ -42,3 +42,19 @@ be the return value of that code. This can be seen in the
 example below where the + operator is used to concatenate 
 the strings catch andphrase:
 */
+const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };
+
+// A new property can be added to an object using a symbol 
+// as a key if the square bracket notation is used:
+
+// The new Symbol date type can also be used as a computed property key:
+
+const firstname = Symbol('firstname');
+const supergirl = { [firstname]: 'Supergirl'}
+//You can access the property using the square bracket notation:
+console.log(supergirl[firstname]);
+//A new property can be added to an object using a symbol as a key 
+// if the square bracket notation is used:
+const realNAme = Symbol('real name');
+supergirl[realNAme] = "Kara Danvers";
+console.log(supergirl[realNAme]);
