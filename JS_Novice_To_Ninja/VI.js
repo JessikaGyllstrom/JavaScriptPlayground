@@ -187,3 +187,4 @@ fly: fly() {
 superman.city = 'Metropolis';
 
 //Changing Properties
+superman['real name'] = 'Kal-El';
