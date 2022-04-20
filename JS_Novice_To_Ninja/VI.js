@@ -119,3 +119,66 @@ console.log(superman.city !== undefined); //fasle
 //another way is to use tje hasOwnProperty() method
 console.log(superman.hasOwnProperty('city')); // false
 
+// Finding all the Properties of an Object
+for(const key in superman) {
+    console.log(key + ": " + superman[key]);
+} 
+/*
+allies: Batman,Supergirl,Superboy
+fly: fly() {
+        return 'Up, up and away!';
+}
+*/
+
+/*
+The Object.keys() method will return an array of all 
+the keys of any object that is provided as an argument. 
+We can then iterate over this array to access all the 
+keys of an object:
+*/
+for(const key of Object.keys(superman)) {
+    console.log(key);
+}
+/*
+name
+real name
+height
+weight
+hero
+villain
+allies
+fly
+*/
+
+/*the Object.values() that works in the same way, 
+but returns an array of all the object’s value:*/
+for(const value of Object.values(superman)) {
+    console.log(value);
+}
+/*
+[ 'Batman', 'Supergirl', 'Superboy' ]
+[Function: fly] 
+*/
+
+/*
+Object.entries() is also part of ES2017 and returns 
+an array of key-value pairs. These key-value pairs 
+are returned in arrays, but they can be destructured 
+and accessed individually using the following notation: */
+for(const [key,value] of Object.entries(superman)) {
+    console.log(`${key}: ${value}`);
+}
+/*
+[ 'Batman', 'Supergirl', 'Superboy' ]
+[Function: fly]
+name: Superman
+real name: Clark Kent
+height: 75
+weight: 235
+hero: true
+villain: false
+allies: Batman,Supergirl,Superboy
+fly: fly() {
+        return 'Up, up and away!';
+    }
+*/
