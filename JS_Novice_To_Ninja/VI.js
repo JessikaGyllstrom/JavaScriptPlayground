@@ -57,4 +57,57 @@ console.log(supergirl[firstname]);
 // if the square bracket notation is used:
 const realNAme = Symbol('real name');
 supergirl[realNAme] = "Kara Danvers";
-console.log(supergirl[realNAme]);
+console.log(supergirl[realNAme]); // Kara Danvers
+
+//SYMBOLS
+/*
+Symbols are new primitive type introduced in ES6. 
+Symbols are completely unique identifiers. 
+Just like their primitive counterparts 
+(Number, String, Boolean), they can be created using 
+the factory function Symbol() which returns a Symbol.
+*/
+const symbol = Symbol('description')
+/* Every time you call the factory function, 
+a new and unique symbol is created. 
+The optional string-valued parameter is a descriptive 
+string that is shown when printing the symbol.*/
+
+Symbol() === Symbol(); // false
+
+Symbol('test') === Symbol('test'); // false
+const test = Symbol('test');
+
+const obj = {};
+obj.test = 'hello';
+obj[test] = 'world';
+
+obj.test; // 'hello'
+obj[test]; // 'world'
+// Since no two symbols are ever equal, you can't access 
+// a symbol property unless you have access to the symbol. 
+// This makes symbols convenient for creating hidden values 
+// that can only be accessed within a certain function.
+function addSymbol(obj) {
+    const sym = Symbol('test');
+    obj[sym] = 'my hidden value';
+  
+    return obj;
+}
+ 
+const object = addSymbol({});
+// No way to access obj[sym] here, unless you explicitly look
+// into `Object.getOwnPropertySymbols()`.
+
+/*
+Symbols are also excluded from JSON.stringify() output, which makes them ideal for storing program-only data that end users shouldn't see.
+*/
+
+/*
+Calling Methods
+To call an object’s method we can also use dot or bracket 
+notation. Calling a method is the same as invoking a function, 
+so parentheses need to be placed after the method name:
+*/
+
+console.log(superman.fly()); // up up and away
