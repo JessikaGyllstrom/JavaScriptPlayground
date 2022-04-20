@@ -188,3 +188,80 @@ superman.city = 'Metropolis';
 
 //Changing Properties
 superman['real name'] = 'Kal-El';
+
+//removing properties
+delete superman.fly 
+
+//Nested Objects
+const jla = {
+    superman: { realName: 'Clark Kent' },
+    batman: { realName: 'Bruce Wayne' },
+    wonderWoman: { realName: 'Diana Prince' },
+    flash: { realName: 'Barry Allen' },
+    aquaman: { realName: 'Arthur Curry' },
+};
+// The values in nested objects can be accessed by 
+// referencing each property name in order using 
+// either dot or bracket notation:
+jla.wonderWoman.realName// "Diana Prince"
+jla['flash']['realName']// "Barry Allen"
+
+
+/*
+Objects Are Copied By Reference
+An important concept to get your head around is that 
+objects are assigned by reference. This means that if 
+a variable is assigned to an object that already 
+exists, it will simply point to the exact same space 
+in memory. So any changes made using either reference 
+will affect the same object.
+*/
+
+/* In the example below, we create a new object called
+ thor to represent The Mighty Thor and make a copy of 
+ it called cloneThor: */
+const thor = { name: 'Thor'
+// more properties here
+};
+const cloneThor = thor;
+
+/* The variable cloneThor now has all the same properties 
+as the thor object. The problem is, we haven't created a 
+new object that is a copy of thor; the variables cloneThor 
+and thor both reference exactly the same object!
+We can see this, if we make a change to the 
+name property of cloneThor: */
+
+cloneThor.name = "Clor";
+console.log(thor.name); //clor
+/* 
+Changing the name property of cloneThor has resulted 
+in the name property of thor changing as well. This
+happens because the variables thor and cloneThor
+both point to the same object in memory. Any changes 
+made to either variable will affect the other.
+This doesn’t happen when primitive values are used 
+instead of objects, as can be seen in the example 
+below: */
+a = 1; 
+b = a;
+// At this point, both a and b will have a value of 1,
+// but if the value of b is changed, it won’t affect 
+// the value of a:
+b = 2;
+// check the value of a hasn't changed
+console.log(a); //1
+
+// Objects as Parameters to Functions
+
+function greet({greeting,name,age}) {
+    return `${greeting}! My name is ${name} and I am ${age} years old.`; }
+
+console.log(greet({ greeting: `What's up dude`, age: 10, name: `Bart` }));
+// What's up dude! My name is Bart and I am 10 years old.
+
+
+function greet({greeting='Hello',name,age=18}) {
+    return `${greeting}! My name is ${name} and I am ${age} years old`;
+}
+console.log(greet({ name: 'Lisa', age: 8 }));
