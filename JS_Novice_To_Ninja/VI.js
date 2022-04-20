@@ -182,3 +182,8 @@ fly: fly() {
         return 'Up, up and away!';
     }
 */
+
+//Adding Properties
+superman.city = 'Metropolis';
+
+//Changing Properties
