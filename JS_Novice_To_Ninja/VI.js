@@ -1,5 +1,28 @@
 // OBJECTS
 /*
+SUMMARY 
+* objects are collection of key-value pairs placed inside {}
+* objects have properties that can be any JS value
+if its a function, its known as a method
+* An objects properties and methods can be accessed using either
+dot notation or aquare bracket notation
+* objects are mutable, which means their properties and
+methods can be changed or removed
+* objects can be used as aparameters to functions, which
+allows arguments to be entered in any order, or omitted
+* nested object can be created by placing objects inside objects
+* JSON is a portable data format that uses JS object literals
+to exchange information
+* The Math object gives access to a number of mathematical constants
+* The Math object can be used to perform mathematical calculations
+* The Date object can be used to create dage objects
+* Once you've created a Date object, you can use the getter
+methods to access information about the date
+* Once you have created a Date object, setter methods can be used
+to change information about that date 
+* The Regex object can be used to create regular expressions
+
+
 An object in JavaScript is a self-contained set of related
  values and functions. They act as a collection of named 
  properties that map to any JavaScript value such as 
@@ -378,4 +401,10 @@ console.log(Math.max(1,2,3))//3
 //And the Math.min() method unsurprisingly returns the minimum number from the given arguments:
 console.log(Math.min(1,2,3))//1
 /* Random numbers */
-console.log(Math.random());
+console.log(Math.random());//0.14763073243530034
+//The following code generates a random integer between 0 and 5 (it will never be 6, 
+// because it always rounds down):
+console.log(Math.floor(6 * Math.random())); // 2 
+/* The Date Object */
+const today = new Date();
+console.log(today); //2022-04-23T20:55:47.919Z
