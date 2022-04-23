@@ -82,3 +82,6 @@ heroes.children.length
 */
 
 //Finding the Value of a Node
+
+//<li class='hero'>Wonder Woman</li>
+const textNode = wonderWoman.firstChild;
