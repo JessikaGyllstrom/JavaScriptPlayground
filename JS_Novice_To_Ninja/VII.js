@@ -49,3 +49,9 @@ For example, the jQuery code $('ul#roster').find('li#bats');
 is basically doing the same as our previous example:
 const ul = document.querySelector('ul#roster');
 ul.querySelector('li#bats') */
+
+/* Navigating the DOM Tree
+Node objects have a number of properties and methods for navigating 
+around the document tree. Once you have a reference to an element, 
+you can walk along the document tree to find other nodes. 
+*/
