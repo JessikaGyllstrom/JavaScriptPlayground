@@ -372,3 +372,8 @@ console.log(Math.hypot(2, 3, 6)); // 7
 The Math.log() method returns the natural logarithm of a number:*/
 console.log(Math.log(1));//0
 
+/* Maximum & Minimum Methods
+The Math.max() method returns the maximum number from its arguments:  */
+console.log(Math.max(1,2,3))//3
+//And the Math.min() method unsurprisingly returns the minimum number from the given arguments:
+console.log(Math.min(1,2,3))//1
