@@ -305,4 +305,13 @@ The parse() method takes a string of data in JSON format and returns a JavaScrip
 
 The stringify() method does the opposite, taking a JavaScript object and returning a string 
 of JSON data.
+
+You can also add a space argument that will add new lines between each key-
+value pair, which is useful when displaying the results in a browser:
+
+JSON.stringify(wonderWoman, null, " ");
+ <<  '{\n "name": "Wonder Woman",\n "real name": "Diana
+➥ Prince",\n "height": 72,\n "weight": 165,\n "hero": true,\n ➥ "villain": 
+false,\n "allies": [\n "Wonder Girl",\n "Donna ➥ Troy",\n "Superman"\n ]\n}'
+
 */
