@@ -338,5 +338,9 @@ console.log(Math.ceil(-4.2));//-4
 /* The Math.floor() method will round a number down to the next integer, 
 or remain the same if it is already an integer: */
 console.log(Math.floor(4.2));//4
-console.log(Math.floor(8));//4
-console.log(Math.floor(-4.2));//4
+console.log(Math.floor(8));//8
+console.log(Math.floor(-4.2));//-5
+/*The Math.round() method will round a number to the nearest integer:*/
+console.log(Math.round(4.5));//5
+console.log(Math.round(4.499));//4
+console.log(Math.round(4.2));//4
