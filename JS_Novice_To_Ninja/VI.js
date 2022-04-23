@@ -346,3 +346,8 @@ console.log(Math.round(4.499));//4
 console.log(Math.round(4.2));//4
 /*The Math.trunc() method that returns the integer-part of a number 
 – that is, it gets truncated at the decimal point: */
+//POWERS AND ROOTS
+/* The Math.pow() method will raise any number (the first argument) 
+to the power of another number (the second argument): */
+console.log(Math.pow(3,2)); // 3 * 3 = 9
+console.log(Math.pow(5, 2));// 5 * 5 = 25 
