@@ -22,3 +22,30 @@ the document is a child node of this.
 
 // Getting An Element By Its ID
 const h1 = document.getElementById('title');
+
+// Get Elements By Their Tag Name
+const listItems = document.getElementsByTagName('li');
+
+// Get Elements By Their Class Name
+const heroes = document.getElementsByClassName('hero');
+
+/* Query Selectors
+The document.querySelector() method allows you to use CSS notation 
+to find the first element in the document that matches that matches 
+a CSS selector provided as an argument */
+/* The document.querySelectorAll() method also uses CSS notation 
+but returns a node list of all the elements in the document that 
+match the CSS query selector. If no elements match, it will return 
+an empty node list. */
+const wonderWoman = document.querySelector('li:last-child');
+const ul = document.querySelector('ul#roster');
+const batman = ul.querySelector('li#bats')
+
+/* jQuery
+jQuery is a popular JavaScript framework that makes it 
+very easy to find elements on a page using a CSS-style syntax. 
+It uses document.querySelectorAll() in the background whenever it can. 
+For example, the jQuery code $('ul#roster').find('li#bats'); 
+is basically doing the same as our previous example:
+const ul = document.querySelector('ul#roster');
+ul.querySelector('li#bats') */
