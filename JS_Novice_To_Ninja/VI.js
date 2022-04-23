@@ -344,3 +344,5 @@ console.log(Math.floor(-4.2));//-5
 console.log(Math.round(4.5));//5
 console.log(Math.round(4.499));//4
 console.log(Math.round(4.2));//4
+/*The Math.trunc() method that returns the integer-part of a number 
+– that is, it gets truncated at the decimal point: */
