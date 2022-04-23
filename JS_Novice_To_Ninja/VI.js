@@ -356,3 +356,8 @@ console.log(Math.pow(5, 2));// 5 * 5 = 25
 console.log(Math.sqrt(121)); // 11
 console.log(Math.sqrt(2)); // 1.4142135623730951
 
+/* The Math.cbrt() method returns the cube root of numbers:*/
+console.log(Math.cbrt(8)); // 2
+console.log(Math.cbrt(-1000)); // -10 
+
+
