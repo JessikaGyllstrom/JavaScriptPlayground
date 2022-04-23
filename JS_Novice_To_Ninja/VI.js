@@ -351,3 +351,8 @@ console.log(Math.round(4.2));//4
 to the power of another number (the second argument): */
 console.log(Math.pow(3,2)); // 3 * 3 = 9
 console.log(Math.pow(5, 2));// 5 * 5 = 25 
+
+/*The Math.sqrt() method returns the positive square root of a number:*/
+console.log(Math.sqrt(121)); // 11
+console.log(Math.sqrt(2)); // 1.4142135623730951
+
