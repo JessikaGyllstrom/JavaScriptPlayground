@@ -315,3 +315,17 @@ JSON.stringify(wonderWoman, null, " ");
 false,\n "allies": [\n "Wonder Girl",\n "Donna ➥ Troy",\n "Superman"\n ]\n}'
 
 */
+/* 
+The Math object is a built-in object that has several properties representing 
+mathematical constants, as well as methods that carry out a number of common 
+mathematical operations. All the properties and methods of the Math object are 
+immutable and unable to be changed. */
+/* Mathematical Methods
+The Math object also has several methods to carry out a variety of useful 
+mathematical operations.
+The Math.abs() method returns the absolute value of a number. 
+So if the number is positive, it will remain the same, and if it’s negative, 
+it will become positive:
+*/
+console.log(Math.abs(3));// 3
+console.log(Math.abs(-3));// 3
