@@ -54,4 +54,31 @@ ul.querySelector('li#bats') */
 Node objects have a number of properties and methods for navigating 
 around the document tree. Once you have a reference to an element, 
 you can walk along the document tree to find other nodes. 
+
+The childNodes property is a list of all the nodes that are children 
+of the node concerned. The following example will return all the child 
+nodes of the element with an id attribute of roster:
+const heroes = document.getElementById('roster');
+heroes.childNodes
+<< NodeList [#text "
+", <li class="hero">, #text "
+", <li id="bats">, #text "
+", <li class="hero">, #text "
+", <li class="hero">, #text "
+
+Note that the childNodes property returns all the nodes that 
+are children of an element. This will include any text nodes, 
+and since whitespace is treated as a text node, there will 
+often be empty text nodes in this collection.
+The children property only returns any element nodes that are children 
+of that node, so will ignore any text nodes. Note that this is only 
+supported in Internet Explorer from version 9 onwards:
+
+heroes.children // this will only contain list items
+ << HTMLCollection [<li class="hero">, <li
+➥ id="bats">, <li class="hero">, <li ➥ class="hero">] (4)
+heroes.children.length
+<< 3
 */
+
+//Finding the Value of a Node
