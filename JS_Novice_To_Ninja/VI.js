@@ -365,8 +365,10 @@ It returns the square root of the sum of the squares of all its
 arguments. This can be used to calculate the hypotenuse of a 
 right-angled triangle: */ 
 console.log(Math.hypot(3,4)); // 5
-console.log(Math.hypot(2, 3, 6)); // 5
+console.log(Math.hypot(2, 3, 6)); // 7
 
 
-
+/* Logarithmic Methods
+The Math.log() method returns the natural logarithm of a number:*/
+console.log(Math.log(1));//0
 
