@@ -265,3 +265,44 @@ function greet({greeting='Hello',name,age=18}) {
     return `${greeting}! My name is ${name} and I am ${age} years old`;
 }
 console.log(greet({ name: 'Lisa', age: 8 }));
+
+//THIS
+/*
+The keyword this refers to the object that it is within. It can be used inside methods to gain access to the object’s properties.
+To demonstrate using this, we’ll create a dice object that has a sides property and a roll() method that returns a number between 1 and the number of sides.
+Here’s the code to create our dice object: */
+const dice = {
+    sides: 6,
+    roll() {
+        return Math.floor(this.sides * Math.random()) + 1;
+    }
+}
+/*
+This object has a sides property and a roll() method. 
+Inside the roll() method we use this.sides to refer 
+to the value of the object’s sides property.
+We also use the random() and floor() methods of 
+the Math object to return a number between 1 and the 
+number of sides. */
+console.log(dice.roll());
+
+
+// JSON
+/* JavaScript Object Notation, or JSON1, 
+was invented by Douglas Crockford in 2001. It is an 
+extremely popular lightweight data-storage format 
+that is used by a large number of services for data 
+serialization and configuration. It is often used 
+to exchange information between web services
+
+JSON is a string representation of the object literal notation that we have just seen. There are, however, a couple of key differences:
+1. Property names must be double-quoted
+2. Permitted values are double-quoted strings, numbers, true, false, null, arrays
+and objects
+3. Functions are not permitted values
+
+The parse() method takes a string of data in JSON format and returns a JavaScript object:
+
+The stringify() method does the opposite, taking a JavaScript object and returning a string 
+of JSON data.
+*/
