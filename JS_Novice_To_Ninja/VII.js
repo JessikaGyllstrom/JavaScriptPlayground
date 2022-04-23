@@ -85,3 +85,24 @@ heroes.children.length
 
 //<li class='hero'>Wonder Woman</li>
 const textNode = wonderWoman.firstChild;
+textNode.nodeValue;
+
+// Getting and Setting Attributes
+//Getting An Element’s Attributes
+/*The getAttribute() method returns the value of the 
+attribute provided as an argument:*/
+wonderWoman.getAttribute('class'); //hero
+
+/*Setting An Element’s Attributes
+The setAttribute can change the value of an element’s attributes. 
+It takes two arguments: the attribute that you wish to change, 
+and the new value of that attribute.
+For example, if we wanted to change the class of the element 
+in the wonderWoman variable to villain, we could do so using this code:*/
+wonderWoman.setAttribute('class', 'villain');
+wonderWoman.getAttribute('class');
+/* If an element does not have an attribute, the setAttribute method 
+can be used to add it to the element. For example, we can add an 
+id of amazon to the wonderWoman element: */
+wonderWoman.setAttribute('id','amazon');
+wonderWoman.getAttribute('id');
