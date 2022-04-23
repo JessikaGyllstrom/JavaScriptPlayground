@@ -329,3 +329,14 @@ it will become positive:
 */
 console.log(Math.abs(3));// 3
 console.log(Math.abs(-3));// 3
+/*Rounding Methods
+The Math.ceil() method will round a number up to the next integer, 
+or remain the same if it is already an integer:*/
+console.log(Math.ceil(4.2));//5
+console.log(Math.ceil(8));//8
+console.log(Math.ceil(-4.2));//-4
+/* The Math.floor() method will round a number down to the next integer, 
+or remain the same if it is already an integer: */
+console.log(Math.floor(4.2));//4
+console.log(Math.floor(8));//4
+console.log(Math.floor(-4.2));//4
