@@ -377,3 +377,5 @@ The Math.max() method returns the maximum number from its arguments:  */
 console.log(Math.max(1,2,3))//3
 //And the Math.min() method unsurprisingly returns the minimum number from the given arguments:
 console.log(Math.min(1,2,3))//1
+/* Random numbers */
+console.log(Math.random());
