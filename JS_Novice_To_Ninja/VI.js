@@ -360,4 +360,13 @@ console.log(Math.sqrt(2)); // 1.4142135623730951
 console.log(Math.cbrt(8)); // 2
 console.log(Math.cbrt(-1000)); // -10 
 
+/* The Math.hypot() method was also introduced in ES6. 
+It returns the square root of the sum of the squares of all its 
+arguments. This can be used to calculate the hypotenuse of a 
+right-angled triangle: */ 
+console.log(Math.hypot(3,4)); // 5
+console.log(Math.hypot(2, 3, 6)); // 5
+
+
+
 
