@@ -106,3 +106,24 @@ can be used to add it to the element. For example, we can add an
 id of amazon to the wonderWoman element: */
 wonderWoman.setAttribute('id','amazon');
 wonderWoman.getAttribute('id');
+
+/* Dot Notation
+The legacy DOM allows access to attributes using dot notation, like so:*/
+wonderWoman.id;
+
+/* The classList Property
+
+The classList property is a list of all the classes an element has. 
+It has a number of methods that make it easier to modify the class 
+of an element. It’s supported in all modern browsers and in Internet
+ Explorer from version 10 onwards.
+The add method can be used to add a class to an element without 
+overwriting any classes that already exist. For example, we could add 
+a class of warrior to the wonderWoman element:*/
+wonderWoman.classList.add('warrior');
+wonderWoman.className;
+wonderWoman.classList.remove('warrior');
+
+/*The contains method will check to see if an element has a particular class:*/
+wonderWoman.classList.contains('hero');
+wonderWoman.classList.contains('villain');
