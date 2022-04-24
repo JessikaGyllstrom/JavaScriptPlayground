@@ -127,3 +127,15 @@ wonderWoman.classList.remove('warrior');
 /*The contains method will check to see if an element has a particular class:*/
 wonderWoman.classList.contains('hero');
 wonderWoman.classList.contains('villain');
+
+// Creating An Element
+/* The document object has a createElement() method that takes a tag name as a
+ parameter and returns that element. For example, we could create a new list 
+ item as a DOM fragment in memory by writing the following in the console: */
+ const flash = document.createElement('li');
+ // At the moment, this element is empty. To add some content, we’ll need to create a text node.
+ // Creating a Text Node
+ /* A text node can be created using the document.createTextNode() method. 
+ It takes a parameter, which is a string containing the text that goes in the node. 
+ Let’s create the text to go in our new element: */
+ const flashText = document.createTextNode('Flash');
