@@ -178,3 +178,6 @@ heroes.insertBefore(aquaman,wonderWoman);
 
 // Remove elements with removeChild()
 heroes.removeChild(aquaman);
+
+// Replacing Elements with replaceChild()
+h1.replaceChild(newText,oldText);
