@@ -187,3 +187,15 @@ if you want to insert a large amount of HTML into the document.
 Instead of creating each element and text node individually, 
 you can simply enter the raw HTML as a string.*/
 heroes.innerHTML = '<li>Harley Quinn</li><li>Deadshot</li><li>KillerCroc</li><li>Enchantress</li><li>CaptainBoomerang</li><li>Katana</li><li>Slipknot</li>';
+
+/* Updating CSS
+Every element node has a style property. T
+his can be used to dynamically modify the presentation 
+of any element on a web page.*/
+superman.style.border = "red 2px solid";
+superman.style.backgroundColor = 'blue';
+// You can hide the superman element with the following code:
+superman.style.display = 'none';
+/* There is a function called getComputedStyle() that will retrieve 
+all the style information of an element that is given as a parameter. */
+getComputedStyle(superman);// CSSStyleDeclaration {0: "alt", 1: "animation-delay", 2: "animation-direction", 3:
