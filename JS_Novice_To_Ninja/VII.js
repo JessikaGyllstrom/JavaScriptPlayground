@@ -1,5 +1,19 @@
 // THE DOCUMENT OBJECT MODEL
 
+/* SUMMARY:
+* the document object model is a way of representing a page of HTML as a tree of nodes.
+* the document.getElementbyId(), document.getElementByClassName(), document.getElementsByTagNames()
+and document.quereySelector() can be used to access elements on a page. 
+* the parentNode(), previousSibling(), nextSibling(), childNodes() and children() methods
+can be used to navigate around the DOM tree. 
+* An elements attributes can be accessed using the getAttribute() method, and updated using
+the setAttribute() method. 
+* the createElement() and createTextNode() methods can be used to create dynamic markup on the fly
+* Markup can be added to the page using the appendChild() and insertBefore()
+* Elements can be replaced using the replaceChild() method and removed using the removeChild()
+* the innerHTML property can be used to insert raw HTML directly into the DOM
+* the CSS properties of an element can be changed by accessing the style property 
+
 /* The Document Object Model (DOM) allows you to access elements of a 
 web page and enable interaction with the page by adding and removing 
 elements, changing the order, content and attributes of elements, 
