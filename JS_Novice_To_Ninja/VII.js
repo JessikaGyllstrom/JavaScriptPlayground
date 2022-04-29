@@ -181,3 +181,9 @@ heroes.removeChild(aquaman);
 
 // Replacing Elements with replaceChild()
 h1.replaceChild(newText,oldText);
+
+/* The power of the innerHTML property becomes even more apparent 
+if you want to insert a large amount of HTML into the document. 
+Instead of creating each element and text node individually, 
+you can simply enter the raw HTML as a string.*/
+heroes.innerHTML = '<li>Harley Quinn</li><li>Deadshot</li><li>KillerCroc</li><li>Enchantress</li><li>CaptainBoomerang</li><li>Katana</li><li>Slipknot</li>';
