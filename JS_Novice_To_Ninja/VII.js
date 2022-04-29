@@ -139,3 +139,25 @@ wonderWoman.classList.contains('villain');
  It takes a parameter, which is a string containing the text that goes in the node. 
  Let’s create the text to go in our new element: */
  const flashText = document.createTextNode('Flash');
+ /* 
+Now we have an element node and a text node, but they are not linked together
+ ― we need to append the text node to the paragraph node. */
+
+ /* Appending Nodes
+ Every node object has an appendChild() method that will add another 
+ node (given as an argument) as a child node. We want our newly created 
+ text node to be a child node of the list element node. This means that 
+ it’s the flash object that calls the method, with flashText as its argument:*/ 
+ flash.appendChild(flashText);
+ /* Now we have a <li> element that contains the text we want. So the process to follow each time you want to create a new element with text content is this:
+1. Create the element node
+2. Create the text node
+3. Append the text node to the element node
+const flashText = document.createTextNode('Flash');*/
+flash.appendChild(flashText);
+
+/* This can be made simpler by using the textContent property that every element object has. 
+This will add a text node to an element without the need to append it, so the code 
+above could have been written as the following:
+While this has cut the number of steps from three down to two, it can still become 
+repetitive, so it’s useful to write a function to make this easier. This is what we’ll do next. */
