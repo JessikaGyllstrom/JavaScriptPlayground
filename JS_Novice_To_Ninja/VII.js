@@ -168,3 +168,10 @@ function createElement (tag, text) {
     elemement.textContent = text;
     return elemement;
 }
+// We can now create new elements in a single line of code rather than three.
+const aquaman = createElement('li','Aquaman');
+
+// Adding elements to the page
+// the appendChild() adds new element to the bottom of a list
+// the insertBefore() will place a new element before
+heroes.insertBefore(aquaman,wonderWoman);
