@@ -130,8 +130,7 @@ wonderWoman.classList.contains('villain');
 
 // Creating An Element
 /* The document object has a createElement() method that takes a tag name as a
- parameter and returns that element. For example, we could create a new list 
- item as a DOM fragment in memory by writing the following in the console: */
+ parameter and returns that element. */
  const flash = document.createElement('li');
  // At the moment, this element is empty. To add some content, we’ll need to create a text node.
  // Creating a Text Node 
@@ -155,9 +154,17 @@ Now we have an element node and a text node, but they are not linked together
 3. Append the text node to the element node
 const flashText = document.createTextNode('Flash');*/
 flash.appendChild(flashText);
+/* This can be made simpler by using the textContent property that every element object has. */
 
-/* This can be made simpler by using the textContent property that every element object has. 
-This will add a text node to an element without the need to append it, so the code 
-above could have been written as the following:
-While this has cut the number of steps from three down to two, it can still become 
-repetitive, so it’s useful to write a function to make this easier. This is what we’ll do next. */
+// Creating a text node with document.createTextNode()
+const flashTxt = document.createTextNode('Flash');
+// Appending nodes with appendChild()
+const superhero = document.createElement('li');
+superhero.textContent = 'Flash';
+
+// A function to create Elements
+function createElement (tag, text) {
+    const elemement = document.createElement(tag);
+    elemement.textContent = text;
+    return elemement;
+}
