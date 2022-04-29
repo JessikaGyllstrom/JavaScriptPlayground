@@ -175,3 +175,6 @@ const aquaman = createElement('li','Aquaman');
 // the appendChild() adds new element to the bottom of a list
 // the insertBefore() will place a new element before
 heroes.insertBefore(aquaman,wonderWoman);
+
+// Remove elements with removeChild()
+heroes.removeChild(aquaman);
