@@ -18,3 +18,9 @@ document.body.addEventListener("click", doSomething);
 /* The click event occurs when a user clicks with the mouse, presses the Enter key, 
 or taps the screen, making it a very useful all-round event covering many types 
 of interaction. */
+<p onclick="console.log('You Clicked Me!')">Click Me</p>
+/* The recommended way of dealing with events, and the current standard, 
+is to use event listeners. The addEventListener() method is called on a node object, 
+the node to which the event listener is being applied. For example, this code will 
+attach an event listener to the document’s body:*/ 
+document.body.addEventListener('click',doSomething);
