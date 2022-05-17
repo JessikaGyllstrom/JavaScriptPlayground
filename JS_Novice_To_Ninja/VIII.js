@@ -101,3 +101,14 @@ onceParagraph.removeEventListener('click',remove);
 but then removes it in the callback function named remove. 
 This means it will only be called once (try clicking on it 
 again and nothing happens).*/
+
+/* Stopping default behaviour
+Some elements have default behavior associated with certain events. 
+For example, when a user clicks on a link, the browser redirects to 
+the address in the href attribute and a form is submitted when the 
+user clicks on the Submit button. */ 
+const brokenLink = document.getElementById('broken');
+brokenLink.addEventListener('click',(event) => {
+event.preventDefault();
+    console.log('Broken Link!');
+});
