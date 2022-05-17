@@ -24,3 +24,37 @@ is to use event listeners. The addEventListener() method is called on a node obj
 the node to which the event listener is being applied. For example, this code will 
 attach an event listener to the document’s body:*/ 
 document.body.addEventListener('click',doSomething);
+/* In the next example, we are adding a click event listener to the whole page 
+(because the addEventListener method is called without a node reference 
+preceding it), and using an anonymous function as the callback: */ 
+addEventListener('click', () => alert('you clicked!'));
+/* The event object
+Whenever an eventhandler is triggered by an event, the callbackfunction is called. 
+This function is automatically passed an event object as a parameter that contains
+information about the event. 
+*/
+function doSomething(event) {
+    console.log(event.type)//click
+}
+/* Parameter Naming
+The parameter does not have to be called event. 
+It can be given any legal variable name, although calling it event can 
+make it easier to read the code. Many developers often abbreviate it to just e.
+*/
+
+/* The event target
+The target property returns a reference to the node that fired the event*/
+function doSomething(event) {
+    console.log(event.target);
+} // => <p id="click">Click On me</p>
+
+/* Mouse events
+There are mousedown and mouseup events. these  both occure BEFORE a click event is fired. 
+*/ 
+const clickParagraph = document.getElementById('click');
+clickParagraph.addEventListener('mousedown', () => console.log("down"));
+//there is also doubleclick
+clickParagraph.addEventListener('dblclick', highlight);
+function highlight(event) {
+    event.target.classList.toggle('highlight');
+}
