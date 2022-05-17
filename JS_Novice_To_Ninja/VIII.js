@@ -112,3 +112,18 @@ brokenLink.addEventListener('click',(event) => {
 event.preventDefault();
     console.log('Broken Link!');
 });
+
+/* Event Propagation
+When you click on an element, you are actually clicking on all the 
+elements it’s nested inside of.
+Event propagation is the order that the events fire on each element. 
+There are two forms of event propagation: bubbling and capturing.
+
+Bubbling is when the event fires on the element clicked on first, 
+then bubbles up the document tree, firing an event on each parent 
+element until it reaches the root node.
+The default behaviour is Bubbling. 
+
+Capturing starts by firing an event on the root element, then 
+propagates downwards, firing an event on each child element until 
+it reaches the target element that was clicked on.*/
