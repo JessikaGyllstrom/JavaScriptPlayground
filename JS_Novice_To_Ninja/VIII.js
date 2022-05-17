@@ -89,4 +89,15 @@ event to the same element. This is because it’s impossible to tell if a
  Usually made with a finger, but can also be a stylus*/
  addEventListener('touchend', () => console.log('Touch ➥ stopped'));
 
- 
+ // Removing event listeners
+ const onceParagraph = document.getElementById('once');
+onceParagraph.addEventListener('click', remove);
+function remove(event) {
+console.log('Enjoy this while it lasts!');
+onceParagraph.style.backgroundColor = 'pink';
+onceParagraph.removeEventListener('click',remove);
+}
+/*This adds a click event listener to a paragraph element, 
+but then removes it in the callback function named remove. 
+This means it will only be called once (try clicking on it 
+again and nothing happens).*/
