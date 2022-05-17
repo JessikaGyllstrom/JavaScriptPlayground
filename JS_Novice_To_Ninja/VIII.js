@@ -58,3 +58,29 @@ clickParagraph.addEventListener('dblclick', highlight);
 function highlight(event) {
     event.target.classList.toggle('highlight');
 }
+/* !! Using click and doubleclick On The Same Element
+You should be very cautious of attaching both a click and doubleclick 
+event to the same element. This is because it’s impossible to tell if a
+ click is the first click of a doubleclick or just a single click. 
+ This means that a doubleclick event will always cause the click event to fire.*/ 
+
+ // The mouseover occurs when a mouse pointer is placed over a element
+ const mouseParagraph = document.getElementById('mouse');
+ mouseParagraph.addEventListener('mouseover', highlight);
+
+ /* Keyboard events 
+ Three events that occur when a user presses a key are: keydown, keypress and keyup. 
+ When a user presses a key the event occur in that order. They are not tied to any 
+ particular key, although the information a about which key was pressed is a 
+ property of the event object. 
+ 1: the keydown event occurs whe a key is pressed and will continue to occure if
+ the key is held down. 
+ 2: the keypress event occurs after a keydown event but before a keyup event.
+ the keypress event only occurs for keys that produce a character input. 
+ This means that its the most reliable way to find out the character that was 
+ pressed on the keyboard. 
+ 3: The keyup event occurs when a key is released. 
+
+ !! Its important to distinguish between a physical key and a character that 
+ appears on the screen. The keydowns event is the action of pressing a key, 
+ whereas the keypress event is the action of a character being typed on the screen. */
