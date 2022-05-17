@@ -84,3 +84,9 @@ event to the same element. This is because it’s impossible to tell if a
  !! Its important to distinguish between a physical key and a character that 
  appears on the screen. The keydowns event is the action of pressing a key, 
  whereas the keypress event is the action of a character being typed on the screen. */
+
+ /* Touch Events
+ Usually made with a finger, but can also be a stylus*/
+ addEventListener('touchend', () => console.log('Touch ➥ stopped'));
+
+ 
