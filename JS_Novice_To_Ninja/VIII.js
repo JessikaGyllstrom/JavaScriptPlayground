@@ -1,4 +1,19 @@
 /* EVENTS
+
+SUMMARY
+
+* Events occur when a user interacts with a webpage
+* An event listener is attatched to an element, then invokes a callback function
+when the event occurs. 
+* The event object is passed to the callback function as an argument, and contains
+lots of properties and methods relating to the event. 
+* There are many types of event, including mouse events, keybord events, and touch events. 
+* You can remove an event using the removeEventListener method. 
+* The default behaviour of elements can be prevented using the preventDefault() function. 
+* Event propagation is the order the events fire on each element. 
+* Event delegation is when an event listever is added to a parent element to capture
+event that happened to its child elements. 
+
 Events are another part of the DOM and they are what provides the link between 
 the web page and user interactions. Every time a user interacts with a web page, 
 such as clicking on a link, pressing a key, or moving a mouse, an event occurs 
@@ -127,3 +142,8 @@ The default behaviour is Bubbling.
 Capturing starts by firing an event on the root element, then 
 propagates downwards, firing an event on each child element until 
 it reaches the target element that was clicked on.*/
+
+/* Event Delegation
+Event delegation can be used to attach an event listener to a parent 
+element in order to capture events that are triggered by its child elements.*/ 
+

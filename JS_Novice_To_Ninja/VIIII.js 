@@ -1,0 +1,24 @@
+/* Forms
+Accessing Form Elements
+The legacy DOM had a useful property called document.forms 
+that returns an HTML collection of all the forms in the document in the order they appear in the
+markup. Even though there is only one form in our example, a collection will still be returned, 
+so we have to use index notation to return the first (and only) form object, like so:*/
+
+const form = document.forms[0];
+
+
+/*
+Instead of using a numerical index, we can use the name attribute to identify a form:
+Be careful referencing elements in this way, however. If the form had the same name as 
+any properties or methods of the document.forms object, such as submit, for example, that 
+property or method would be referenced instead of the <form> element. This is unlikely to happen, 
+as the document.form object doesn’t have many properties or methods, but it is something to be aware of. 
+To avoid this, square bracket notation can be used (this is also required if the form’s name attribute 
+contains any invalid characters, such as spaces or dashes):
+A form object also has a method called elements that returns an HTML collection of all the elements 
+contained in the form. In this case the form contains two controls: an input element and a button element:*/
+
+const form = document.getElementsByTagname('form')[0];
+
+const form = document.forms.search;
